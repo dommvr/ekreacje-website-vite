@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 20, 32, 45;
+  --background-start-rgb: 245, 244, 239;
+  --background-end-rgb: 245, 244, 239;
+  
+  /* Paper Grain Variables */
+  --paper-bg: #f5f4ef;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 104px; /* Offset for sticky header (increased from 80px) */
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: rgb(var(--background-start-rgb));
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+/* Paper Grain Effect - Simplified for performance */
+.paper-bg {
+  background-color: var(--paper-bg);
+  min-height: 100vh;
+  position: relative;
+}
+
+/* 
+   REMOVED SVG feTurbulence filter. 
+   It causes "Connection Refused" / "Aw Snap" crashes on Safari (MacBook) 
+   due to excessive GPU resource usage on Retina displays.
+*/
+
+/* Hide number input spinners */
+.no-spinner::-webkit-inner-spin-button,
+.no-spinner::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.no-spinner {
+  -moz-appearance: textfield;
+}
