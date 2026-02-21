@@ -110,20 +110,20 @@ const Navbar = ({ currentHash = '' }: { currentHash?: string }) => {
   return (
     <header className="sticky top-0 z-50 w-full bg-background backdrop-blur-sm border-b border-primary">
       <div className="max-w-[1920px] mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-[104px]">
-          <a href="#home" onClick={(e) => handleNavClick(e, '#home')} className="flex items-center gap-0 group">
+        <div className="flex justify-between items-center min-h-[80px] py-2 lg:py-4 transition-all duration-300 gap-12">
+          <a href="#home" onClick={(e) => handleNavClick(e, '#home')} className="flex items-center gap-2 group shrink-0">
             <img 
               src="https://storage.googleapis.com/ekreacje-assets/logo_2.png" 
               alt="E-KREACJE" 
-              className="h-[88px] w-auto object-contain transition-all duration-300 group-hover:brightness-[0.9]" 
+              className="h-12 sm:h-16 xl:h-[88px] w-auto object-contain transition-all duration-300 group-hover:brightness-[0.9]" 
             />
-            <span className="font-cormorant font-medium text-4xl md:text-5xl text-accent hidden sm:block whitespace-nowrap pt-1">
+            <span className="font-cormorant font-medium text-2xl sm:text-3xl lg:text-4xl xl:text-5xl text-accent hidden sm:block whitespace-nowrap pt-1 transition-all duration-300">
               Aleksandra Marciniak
             </span>
           </a>
 
-          <div className="hidden md:flex items-center gap-10">
-            <nav className="flex items-center gap-10 h-full">
+          <div className="hidden lg:flex items-center gap-6 xl:gap-10">
+            <nav className="flex items-center gap-6 xl:gap-10 h-full">
               {NAV_ITEMS.map((item) => {
                 const isActive = checkIsActive(item);
 
@@ -134,9 +134,11 @@ const Navbar = ({ currentHash = '' }: { currentHash?: string }) => {
                       href={item.href}
                       onClick={(e) => handleNavClick(e, item.href)}
                       className={cn(
-                        "uppercase tracking-widest text-lg font-medium transition-all duration-300 cursor-pointer relative",
+                        "uppercase tracking-widest font-medium transition-all duration-300 cursor-pointer relative whitespace-nowrap",
+                        // Responsive sizes
+                        "text-sm xl:text-lg",
                         item.isButton
-                          ? "bg-accent text-white px-8 py-4 hover:bg-accent-hover active:scale-95"
+                          ? "bg-accent text-white px-5 py-2 xl:px-8 xl:py-4 hover:bg-accent-hover active:scale-95"
                           : isActive ? "text-accent font-bold" : "text-primary hover:text-accent"
                       )}
                     >
@@ -154,7 +156,11 @@ const Navbar = ({ currentHash = '' }: { currentHash?: string }) => {
 
                 return (
                   <div key={item.id} className="relative group h-full flex items-center" onMouseEnter={() => setHoveredItem(item.id)} onMouseLeave={() => setHoveredItem(null)}>
-                     <button className={cn("uppercase tracking-widest text-lg font-medium transition-all duration-300 cursor-pointer flex items-center gap-1 relative", isActive ? "text-accent font-bold" : "text-primary group-hover:text-accent")}>
+                     <button className={cn(
+                       "uppercase tracking-widest font-medium transition-all duration-300 cursor-pointer flex items-center gap-1 relative whitespace-nowrap",
+                       "text-sm xl:text-lg",
+                       isActive ? "text-accent font-bold" : "text-primary group-hover:text-accent"
+                     )}>
                        {item.name}
                        <ChevronDown size={16} className={cn("transition-transform duration-300", hoveredItem === item.id ? "rotate-180" : "")} />
                        {isActive && (
@@ -188,22 +194,22 @@ const Navbar = ({ currentHash = '' }: { currentHash?: string }) => {
               })}
             </nav>
 
-            <div className="flex items-center gap-2 text-sm font-sans tracking-widest">
+            <div className="flex items-center gap-2 text-xs xl:text-sm font-sans tracking-widest">
                 <button onClick={() => setLanguage('pl')} className={cn("transition-colors", lang === 'pl' ? "font-bold text-accent" : "text-muted hover:text-primary")}>PL</button>
                 <span className="text-border">|</span>
                 <button onClick={() => setLanguage('en')} className={cn("transition-colors", lang === 'en' ? "font-bold text-accent" : "text-muted hover:text-primary")}>EN</button>
             </div>
           </div>
 
-          <button onClick={() => setIsOpen(!isOpen)} className="md:hidden p-2 text-primary hover:text-accent transition-colors">
-            {isOpen ? <X size={36} /> : <Menu size={36} />}
+          <button onClick={() => setIsOpen(!isOpen)} className="lg:hidden p-2 text-primary hover:text-accent transition-colors">
+            {isOpen ? <X size={32} /> : <Menu size={32} />}
           </button>
         </div>
       </div>
 
       <AnimatePresence>
         {isOpen && (
-          <motion.div initial={{ opacity: 0, height: 0 }} animate={{ opacity: 1, height: 'auto' }} exit={{ opacity: 0, height: 0 }} className="md:hidden border-t border-border bg-background overflow-hidden">
+          <motion.div initial={{ opacity: 0, height: 0 }} animate={{ opacity: 1, height: 'auto' }} exit={{ opacity: 0, height: 0 }} className="lg:hidden border-t border-border bg-background overflow-hidden">
             <nav className="flex flex-col p-8 space-y-4">
               {NAV_ITEMS.map((item) => {
                  const isActive = checkIsActive(item);
