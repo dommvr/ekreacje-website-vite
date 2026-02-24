@@ -7,6 +7,7 @@ export interface Spread {
 export interface BookProject {
   id: string;
   title: string;
+  author?: string;
   category: string;
   coverSrc: string;
   spreads: Spread[];
@@ -19,6 +20,7 @@ export const getPortfolioData = (lang: 'pl' | 'en'): BookProject[] => {
       {
         id: "01",
         title: "Gruba Tańczy",
+        author: "Dominik Bielicki",
         category: "Poems",
         coverSrc: "https://storage.googleapis.com/ekreacje-assets/1_cover.png", 
         spreads: [
@@ -39,7 +41,8 @@ In the cover design, I focused on minimalism, geometry, and repetition. Dark col
       },
       {
         id: "02",
-        title: "Andersen's Fairy Tales",
+        title: "Fairy Tales",
+        author: "Hans Christian Andersen",
         category: "Fantasy",
         coverSrc: "https://storage.googleapis.com/ekreacje-assets/2.2_cover.png",
         spreads: [
@@ -48,8 +51,7 @@ In the cover design, I focused on minimalism, geometry, and repetition. Dark col
             rightSrc: "https://storage.googleapis.com/ekreacje-assets/2.2_page.png",
           }
         ],
-        designNotes: `Fairy Tales by Hans Christian Andersen
-The goal was to create an original edition of H.C. Andersen's tales, departing from typically childish, richly illustrated editions. I focused on a slightly older audience. My priority was purity of form and elegance, allowing the content to resonate without distracting the reader with unnecessary ornaments.
+        designNotes: `The goal was to create an original edition of H.C. Andersen's tales, departing from typically childish, richly illustrated editions. I focused on a slightly older audience. My priority was purity of form and elegance, allowing the content to resonate without distracting the reader with unnecessary ornaments.
 I wanted to maintain modern minimalism and a design for a multi-page narrative that retains lightness and readability. I also had to decide whether the cover would operate with a literal image or rather with atmosphere and color.
 I chose classic serif typography, giving the publication a dignified character.
 Page Architecture: The interior is characterized by a large amount of "white space", ensuring text blocks don't overwhelm. I used wide margins and thoughtful leading, increasing comfort for long reading sessions.
@@ -62,6 +64,7 @@ Ultimately, I developed two cover concepts:
       {
         id: "03",
         title: "Doctor Dolittle",
+        author: "Hugh Lofting",
         category: "Novel",
         coverSrc: "https://storage.googleapis.com/ekreacje-assets/3_cover.png",
         spreads: [
@@ -87,6 +90,7 @@ I designed the cover in a retro spirit, in cream tones, with a centrally placed 
     {
       id: "01",
       title: "Gruba Tańczy",
+      author: "Dominik Bielicki",
       category: "Wiersze",
       coverSrc: "https://storage.googleapis.com/ekreacje-assets/1_cover.png", 
       spreads: [
@@ -111,7 +115,8 @@ W projekcie okładek postawiłam na minimalizm, geometrię i powtarzalność. Ci
     },
     {
       id: "02",
-      title: "Baśnie Andersena",
+      title: "Baśnie",
+      author: "Hans Christian Andersen",
       category: "Fantasy",
       coverSrc: "https://storage.googleapis.com/ekreacje-assets/2.2_cover.png",
       spreads: [
@@ -128,8 +133,7 @@ W projekcie okładek postawiłam na minimalizm, geometrię i powtarzalność. Ci
           rightSrc: "https://storage.googleapis.com/ekreacje-assets/2.4_page.png",
         }
       ],
-      designNotes: `Baśnie Hansa Christiana Andersena
-Celem projektu było stworzenie autorskiej edycji Baśni H.C. Andersena, która odbiega od typowo dziecięcych, bogato ilustrowanych wydań. Skupiłam się na odbiorcy nieco starszym. Moim priorytetem była czystość formy i elegancja, pozwalająca wybrzmieć treści bez rozpraszania czytelnika zbędnymi ozdobnikami.
+      designNotes: `Celem projektu było stworzenie autorskiej edycji Baśni H.C. Andersena, która odbiega od typowo dziecięcych, bogato ilustrowanych wydań. Skupiłam się na odbiorcy nieco starszym. Moim priorytetem była czystość formy i elegancja, pozwalająca wybrzmieć treści bez rozpraszania czytelnika zbędnymi ozdobnikami.
 Zależało mi na zachowaniu nowoczesnego minimalizmu i projekcie dla wielostronicowej narracji, który zachowa lekkość i czytelność. Musiałam również zdecydować, czy okładka będzie operować dosłownym obrazem, czy raczej klimatem i kolorem.
 Postawiłam na klasyczną typografię szeryfową, która nadaje publikacji dostojny charakter.
 Architektura strony: Wnętrze charakteryzuje się dużą ilością "światła", co sprawia, że bloki tekstu nie przytłaczają. Zastosowałam szerokie marginesy i przemyślaną interlinię, co zwiększa komfort długiego czytania.
@@ -142,6 +146,7 @@ Ostatecznie opracowałam dwie koncepcje okładki:
     {
       id: "03",
       title: "Doktor Dolittle i jego zwierzęta",
+      author: "Hugh Lofting",
       category: "Powieść",
       coverSrc: "https://storage.googleapis.com/ekreacje-assets/3_cover.png",
       spreads: [
@@ -222,7 +227,7 @@ export const getAllProjectsData = (lang: 'pl' | 'en'): AllProjectItem[] => {
     },
     {
       id: "ap-02",
-      title: isEn ? "Andersen's Fairy Tales" : "Baśnie Andersena",
+      title: isEn ? "Fairy Tales" : "Baśnie",
       category: "Fantasy",
       images: [
         "https://storage.googleapis.com/ekreacje-assets/mockup_basnie_1.png",

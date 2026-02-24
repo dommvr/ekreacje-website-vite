@@ -234,7 +234,7 @@ const Portfolio = () => {
 
                 <div className="text-center space-y-2 mt-4">
                   <h3 className="text-2xl font-serif font-bold text-primary">{currentBook.title}</h3>
-                  <p className="text-sm font-medium text-accent uppercase tracking-widest">{currentBook.category}</p>
+                  <p className="text-[10px] font-bold text-accent uppercase tracking-[0.2em]">{currentBook.category}</p>
                 </div>
               </motion.div>
 
@@ -353,8 +353,11 @@ const Portfolio = () => {
 
                         <div className="space-y-6">
                           <div>
-                            <h3 className="font-serif text-3xl font-bold text-primary mb-2">{currentBook.title}</h3>
-                            <span className="inline-block px-3 py-1 bg-accent/10 text-accent text-xs font-bold uppercase tracking-widest rounded-full">
+                            <h3 className="font-serif text-2xl font-bold text-primary mb-1">{currentBook.title}</h3>
+                            {currentBook.author && (
+                              <p className="text-sm text-secondary font-medium mb-1 italic">{currentBook.author}</p>
+                            )}
+                            <span className="inline-block px-2 py-0.5 bg-accent/10 text-accent text-[10px] font-bold uppercase tracking-widest rounded-full">
                               {currentBook.category}
                             </span>
                           </div>
@@ -413,6 +416,9 @@ const Portfolio = () => {
                           <h3 className="font-serif text-4xl md:text-5xl font-bold text-primary">
                             {currentBook.title}
                           </h3>
+                          {currentBook.author && (
+                            <p className="text-xl text-secondary font-medium italic mt-2">{currentBook.author}</p>
+                          )}
                         </div>
 
                         <div className="font-serif text-lg text-secondary leading-loose max-w-none">

@@ -113,8 +113,8 @@ const Navbar = ({ currentHash = '' }: { currentHash?: string }) => {
         <div className="flex justify-between items-center min-h-[80px] py-2 lg:py-4 transition-all duration-300 gap-12">
           <a href="#home" onClick={(e) => handleNavClick(e, '#home')} className="flex items-center gap-2 group shrink-0">
             <img 
-              src="https://storage.googleapis.com/ekreacje-assets/logo_2.png" 
-              alt="E-KREACJE" 
+              src="https://storage.googleapis.com/ekreacje-assets/logo_2.1.png" 
+              alt="Aleksandra Marciniak" 
               className="h-12 sm:h-16 xl:h-[88px] w-auto object-contain transition-all duration-300 group-hover:brightness-[0.9]" 
             />
           </a>
