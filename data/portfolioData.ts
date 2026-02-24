@@ -91,16 +91,12 @@ I designed the cover in a retro spirit, in cream tones, with a centrally placed 
       coverSrc: "https://storage.googleapis.com/ekreacje-assets/1_cover.png", 
       spreads: [
         {
-          leftSrc: "https://storage.googleapis.com/ekreacje-assets/2.0_page.png",
-          rightSrc: "https://storage.googleapis.com/ekreacje-assets/2.0.1_page.png",
+          leftSrc: "https://storage.googleapis.com/ekreacje-assets/1.3_page.png",
+          rightSrc: "https://storage.googleapis.com/ekreacje-assets/1.4_page.png",
         },
         {
-          leftSrc: "https://storage.googleapis.com/ekreacje-assets/2.1_page.png",
-          rightSrc: "https://storage.googleapis.com/ekreacje-assets/2.2_page.png",
-        },
-        {
-          leftSrc: "https://storage.googleapis.com/ekreacje-assets/2.3_page.png",
-          rightSrc: "https://storage.googleapis.com/ekreacje-assets/2.4_page.png",
+          leftSrc: "https://storage.googleapis.com/ekreacje-assets/1.5_page.png",
+          rightSrc: "https://storage.googleapis.com/ekreacje-assets/1.6_page.png",
         }
       ],
       designNotes: `Moje próby z poezją
@@ -120,8 +116,16 @@ W projekcie okładek postawiłam na minimalizm, geometrię i powtarzalność. Ci
       coverSrc: "https://storage.googleapis.com/ekreacje-assets/2.2_cover.png",
       spreads: [
         {
+          leftSrc: "https://storage.googleapis.com/ekreacje-assets/2.0_page.png",
+          rightSrc: "https://storage.googleapis.com/ekreacje-assets/2.0.1_page.png",
+        },
+        {
           leftSrc: "https://storage.googleapis.com/ekreacje-assets/2.1_page.png",
           rightSrc: "https://storage.googleapis.com/ekreacje-assets/2.2_page.png",
+        },
+        {
+          leftSrc: "https://storage.googleapis.com/ekreacje-assets/2.3_page.png",
+          rightSrc: "https://storage.googleapis.com/ekreacje-assets/2.4_page.png",
         }
       ],
       designNotes: `Baśnie Hansa Christiana Andersena
