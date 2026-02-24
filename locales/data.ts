@@ -133,9 +133,9 @@ export const pl: Dictionary = {
   },
   hero: {
     title: "Twoja opowieść zasługuje na oprawę premium",
-    subtitle: "Piszesz porywający kryminał, nastrojową poezję czy epickie sci-fi? Zadbam o to, by forma Twojej książki dorównała jakości treści.",
+    subtitle: "Piszesz porywający kryminał, nastrojową poezję czy epickie powieści? Zadbam o to, by forma Twojej książki dorównała jakości treści.",
     desc1: "Oferuję kompleksowe projektowanie okładek oraz precyzyjny skład i łamanie tekstu. Od dopracowanej typografii po techniczne przygotowanie do druku – biorę na siebie cały proces wizualny. Tworzę estetyczne, czytelne układy, które budują autorytet autora i komfort czytelnika.",
-    desc2: "Działajmy konkretnie i bez zbędnego dystansu. Mam wolne terminy na najbliższy miesiąc – sprawdźmy, czy pasujemy do siebie projektowo.",
+    desc2: "Działajmy konkretnie i bez zbędnego dystansu. Sprawdźmy, czy pasujemy do siebie projektowo.",
     quote: "Potrzebujesz wycenę? Prześlij krótki opis swojej książki.",
     cta: "Poproś o wycenę"
   },
@@ -147,8 +147,8 @@ export const pl: Dictionary = {
     whatIdoDesc: "Mój zakres prac obejmuje wszystko, co niezbędne, aby Twój maszynopis stał się profesjonalną publikacją.",
     list: [
       "Projektowanie okładek (front, tył i grzbiet) dostosowanych do wymagań technicznych wybranej drukarni.",
-      "Profesjonalny skład i łamanie tekstu, (m.in. dbałość o bękarty, szewce i poprawne przenoszenie wyrazów).",
-      "Architektura wnętrza: dobór czytelnych czcionek, projektowanie żywej paginy, spisów treści i rozdziałów.",
+      "Profesjonalny skład i łamanie tekstu (dbałość o techniczne fundamenty publikacji i poprawną formę typograficzną).",
+      "Architektura wnętrza: dobór kroju pisma, projektowanie żywej paginy, spisów treści i rozdziałów.",
       "Przygotowanie plików do druku (DTP): ustawienie spadów, marginesów bezpieczeństwa i odpowiednich profili kolorystycznych.",
       "Skład e-booków (EPUB/MOBI) na podstawie gotowego projektu wnętrza."
     ],
@@ -157,7 +157,7 @@ export const pl: Dictionary = {
     processSteps: [
       { title: "Konsultacja i plan:", desc: "Rozmawiamy o Twoich oczekiwaniach i klimacie książki, wspólnie ustalamy harmonogram, zakres prac i budżet." },
       { title: "Koncepcja okładki:", desc: "Przygotowuję propozycję okładki." },
-      { title: "Projekt wnętrza i skład:", desc: "Dobieram czcionki, krój pisma i estetykę tekstu." },
+      { title: "Projekt wnętrza i skład:", desc: "Dobieram odpowiedni krój pisma i dbam o estetykę, układ i czytelność tekstu." },
       { title: "Finalizacja:", desc: "Otrzymujesz pliki PDF w standardzie gotowym do druku lub dystrybucji online." }
     ],
     pricingTitle: "Od czego zależy cena?",
@@ -179,8 +179,8 @@ export const pl: Dictionary = {
     subtitle: "Przejdźmy przez to razem.",
     desc: "Wiem, że proces wydawniczy może przytłaczać, dlatego stawiam na partnerskie zasady. Nie jestem anonimową agencją – jestem Twoim bezpośrednim wsparciem. Pracuję głównie z autorami niezależnymi i prywatnymi osobami, które szukają kogoś, kto poprowadzi ich za rękę przez techniczne zawiłości przygotowania do druku.",
     cards: [
-      { title: "Dla Debiutantów", desc: "Jeśli to Twój pierwszy raz, zadbam o to, by Twój układ gotowy do druku był technicznie perfekcyjne, a proces – jasny i bezstresowy." },
-      { title: "Dla Autorów literatury", desc: "Twoja poezja, kryminał czy sci-fi otrzymają oprawę (w tym profesjonalny projekt okładki), która odda ich unikalny charakter." },
+      { title: "Dla Debiutantów", desc: "Jeśli to Twój pierwszy raz, zadbam o to, aby Twój projekt przygotowany do druku był technicznie perfekcyjny, a cały proces jasny i bezstresowy." },
+      { title: "Dla Autorów literatury", desc: "Twoja poezja, kryminał czy powieść otrzymają oprawę (w tym profesjonalny projekt okładki), która odda ich unikalny charakter." },
       { title: "Dla Wydawców prywatnych", desc: "Tworzę dopracowany skład wnętrza dla projektów, które wymagają intymności i dbałości o detale, nieosiągalnych w masowej produkcji." }
     ],
     footer: "Działamy bez zbędnego formalizmu. Rozmawiamy bezpośrednio, szukamy najlepszych rozwiązań dla Twojego budżetu i wspólnie dopieszczamy każdy detal typografii książki."

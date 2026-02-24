@@ -91,12 +91,20 @@ I designed the cover in a retro spirit, in cream tones, with a centrally placed 
       coverSrc: "https://storage.googleapis.com/ekreacje-assets/1_cover.png", 
       spreads: [
         {
-          leftSrc: "https://storage.googleapis.com/ekreacje-assets/1.1_page.png",
-          rightSrc: "https://storage.googleapis.com/ekreacje-assets/1.2_page.png",
+          leftSrc: "https://storage.googleapis.com/ekreacje-assets/2.0_page.png",
+          rightSrc: "https://storage.googleapis.com/ekreacje-assets/2.0.1_page.png",
+        },
+        {
+          leftSrc: "https://storage.googleapis.com/ekreacje-assets/2.1_page.png",
+          rightSrc: "https://storage.googleapis.com/ekreacje-assets/2.2_page.png",
+        },
+        {
+          leftSrc: "https://storage.googleapis.com/ekreacje-assets/2.3_page.png",
+          rightSrc: "https://storage.googleapis.com/ekreacje-assets/2.4_page.png",
         }
       ],
       designNotes: `Moje próby z poezją
-To projekt, w którym chciałam sprawdzić, jak poradzę sobie z bardzo oszczędną formą. Poezja jest wyzwaniem, zarówno pod względem typograficznym, jak i technicznym. Chciałam stworzyć miejsce, w którym wiersz ma po prostu „miejsce do bycia”.
+to koncepcyjny projekt, w którym chciałam sprawdzić, jak poradzę sobie z bardzo oszczędną formą. Poezja jest wyzwaniem, zarówno pod względem typograficznym, jak i technicznym. Chciałam stworzyć miejsce, w którym wiersz ma po prostu „miejsce do bycia”.
 Najtrudniejsze było dla mnie wyczucie, ile tekstu zmieścić na jednej stronie, żeby nie wydawała się pusta, a jednocześnie nie była przeładowana. Kolejnym krokiem była moja pierwsza próba przeniesienia tych wierszy do formatu EPUB. 
 W projekcie zastosowałam proste rozwiązania, które wydawały mi się najbardziej naturalne:
 Wiersz na osobnej stronie: Dzięki temu każdy tytuł ma swój własny moment uwagi. To daje czytelnikowi czas na spokojne przejście do kolejnej myśli.
@@ -134,12 +142,19 @@ Ostatecznie opracowałam dwie koncepcje okładki:
       coverSrc: "https://storage.googleapis.com/ekreacje-assets/3_cover.png",
       spreads: [
         {
-          leftSrc: "https://storage.googleapis.com/ekreacje-assets/3.1_page.png",
-          rightSrc: "https://storage.googleapis.com/ekreacje-assets/3.2_page.png",
+          leftSrc: "https://storage.googleapis.com/ekreacje-assets/3.0_page.png",
+          rightSrc: "https://storage.googleapis.com/ekreacje-assets/3.1_page.png",
+        },
+        {
+          leftSrc: "https://storage.googleapis.com/ekreacje-assets/3.2_page.png",
+          rightSrc: "https://storage.googleapis.com/ekreacje-assets/3.3_page.png",
+        },
+        {
+          leftSrc: "https://storage.googleapis.com/ekreacje-assets/3.4_page.png",
+          rightSrc: "https://storage.googleapis.com/ekreacje-assets/3.5_page.png",
         }
       ],
-      designNotes: `Dr Dolittle i jego zwierzęta - Hugh Lofting
-Zależało mi, aby stworzyć edycję „Doktora Dolittle”, która łączyłaby klasyczną elegancję z potrzebami młodszego czytelnika - czyli projekcie czystym, przejrzystym i na tyle lekkim w odbiorze, by sama typografia zachęcała do śledzenia przygód bohaterów. Postawiłam na minimalizm, w którym to układ tekstu i starannie dobrane kroje pisma budują przedstawiony w książce świat.
+      designNotes: `Zależało mi, aby stworzyć edycję „Doktora Dolittle”, która łączyłaby klasyczną elegancję z potrzebami młodszego czytelnika - czyli projekcie czystym, przejrzystym i na tyle lekkim w odbiorze, by sama typografia zachęcała do śledzenia przygód bohaterów. Postawiłam na minimalizm, w którym to układ tekstu i starannie dobrane kroje pisma budują przedstawiony w książce świat.
 Największym wyzwaniem projektowym było stworzenie atrakcyjnej publikacji dla dzieci przy całkowitej rezygnacji z ilustracji. By tekst nie wydawał się „zbyt dorosły” lub nużący przeniosłam ciężar narracji wizualnej na światło, proporcje i detale typograficzne.
 Aby ułatwić lekturę i nie przemęczać wzroku młodego odbiorcy, wprowadziłam kilka rozwiązań:
 Komfort czytania: Zwiększyłam stopień pisma oraz interlinię, aby młodszy czytelnik łatwiej odnalazł się w gęstszej narracji.
