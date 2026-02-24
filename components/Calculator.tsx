@@ -31,14 +31,14 @@ const getOptionsConfig = (t: Dictionary): OptionConfig[] => [
     id: 'layout',
     label: t.calculator.options.layout.label,
     description: t.calculator.options.layout.desc,
-    price: 400,
+    price: 450,
     type: 'fixed',
   },
   {
     id: 'typesetting',
     label: t.calculator.options.typesetting.label,
     description: t.calculator.options.typesetting.desc,
-    price: 130,
+    price: 120,
     type: 'per_sheet',
   },
   {
@@ -50,11 +50,18 @@ const getOptionsConfig = (t: Dictionary): OptionConfig[] => [
     type: 'fixed',
   },
   {
+    id: 'cover_pdf',
+    label: t.calculator.options.cover_pdf.label,
+    description: t.calculator.options.cover_pdf.desc,
+    price: 350,
+    type: 'fixed',
+  },
+  {
     id: 'epub',
     label: t.calculator.options.epub.label,
     description: t.calculator.options.epub.desc,
     startingPriceLabel: t.calculator.options.epub.startingPrice,
-    price: 500,
+    price: 350,
     type: 'fixed',
   },
   {
@@ -77,7 +84,7 @@ const getOptionsConfig = (t: Dictionary): OptionConfig[] => [
     id: 'pdf_access',
     label: t.calculator.options.pdf_access.label,
     description: t.calculator.options.pdf_access.desc,
-    price: 300,
+    price: 200,
     type: 'fixed',
   },
 ];
@@ -93,6 +100,7 @@ const Calculator = () => {
     { id: 'layout', enabled: false, quantity: 0 },
     { id: 'typesetting', enabled: false, quantity: 0 },
     { id: 'cover', enabled: false, quantity: 0 },
+    { id: 'cover_pdf', enabled: false, quantity: 0 },
     { id: 'epub', enabled: false, quantity: 0 },
     { id: 'tables', enabled: false, quantity: 0 },
     { id: 'illustrations', enabled: false, quantity: 0 },

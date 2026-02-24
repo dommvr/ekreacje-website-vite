@@ -93,6 +93,7 @@ export interface Dictionary {
       layout: { label: string; desc: string };
       typesetting: { label: string; desc: string };
       cover: { label: string; desc: string; startingPrice: string };
+      cover_pdf: { label: string; desc: string };
       epub: { label: string; desc: string; startingPrice: string };
       tables: { label: string; desc: string; unit: string };
       illustrations: { label: string; desc: string; unit: string };
@@ -166,7 +167,7 @@ export const pl: Dictionary = {
     pricingListTitle: "Cennik orientacyjny:",
     pricingList: [
       { label: "Projekt okładki:", value: "od 350 zł" },
-      { label: "Skład wnętrza (beletrystyka):", value: "od 100 zł za arkusz (40 000 znaków ze spacjami, około 22 strony)" },
+      { label: "Skład wnętrza (beletrystyka):", value: "od 120 zł za arkusz (40 000 znaków ze spacjami, około 22 strony)" },
       { label: "E-book (EPUB3):", value: "od 350 zł" }
     ],
     pricingCta: "Oblicz koszt w kalkulatorze",
@@ -240,6 +241,7 @@ export const pl: Dictionary = {
       layout: { label: 'Projekt layoutu', desc: 'Jednorazowa opłata. Projekt układu treści na stronie, doboru typografii, elementów ozdobnych.' },
       typesetting: { label: 'Skład publikacji', desc: '130.00 zł / arkusz wydawniczy. Skład DTP publikacji do druku.' },
       cover: { label: 'Projekt okładki', desc: 'Projekt okładki do druku (przód, tył, grzbiet).', startingPrice: 'Od 600.00 zł' },
+      cover_pdf: { label: 'Projekt okładki PDF', desc: 'Projekt okładki do PDF (przód).' },
       epub: { label: 'Konwersja do ePub/mobi', desc: 'Stworzenie dostępnego pliku ePub, zgodnego z wymogami dystrybutorów.', startingPrice: 'Od 500.00 zł' },
       tables: { label: 'Tabele', desc: '10.00 zł / tabela. Wpisz liczbę tabel w treści publikacji.', unit: 'tabela' },
       illustrations: { label: 'Ilustracje', desc: '10.00 zł / ilustracja. Wpisz ile ilustracji zawiera treść.', unit: 'ilustracja' },
@@ -387,6 +389,7 @@ export const en: Dictionary = {
       layout: { label: 'Layout Design', desc: 'One-time fee. Design of content layout, typography selection, decorative elements.' },
       typesetting: { label: 'Typesetting', desc: '130.00 PLN / publishing sheet. DTP typesetting for print.' },
       cover: { label: 'Cover Design', desc: 'Print cover design (front, back, spine).', startingPrice: 'From 600.00 PLN' },
+      cover_pdf: { label: 'PDF Cover Design', desc: 'Cover design for PDF (front only).' },
       epub: { label: 'E-book Conversion', desc: 'Creation of accessible ePub/mobi file compliant with distributor requirements.', startingPrice: 'From 500.00 PLN' },
       tables: { label: 'Tables', desc: '10.00 PLN / table. Enter the number of tables.', unit: 'table' },
       illustrations: { label: 'Illustrations', desc: '10.00 PLN / illustration. Enter the number of illustrations.', unit: 'illustration' },
