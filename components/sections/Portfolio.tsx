@@ -18,6 +18,7 @@ const Portfolio = () => {
   const [isReaderOpen, setIsReaderOpen] = useState(false);
   const [isFullNoteOpen, setIsFullNoteOpen] = useState(false); // New state for expanded text
   const [currentSpreadIndex, setCurrentSpreadIndex] = useState(0);
+  const [direction, setDirection] = useState(0);
 
   const currentBook = PORTFOLIO_DATA[currentIndex];
   const totalBooks = PORTFOLIO_DATA.length;
@@ -71,6 +72,7 @@ const Portfolio = () => {
   useEffect(() => {
     // When book changes, reset inner states
     setCurrentSpreadIndex(0);
+    setDirection(0);
     setIsFullNoteOpen(false);
   }, [currentIndex]);
 
@@ -114,6 +116,7 @@ const Portfolio = () => {
   const nextSpread = (e?: React.MouseEvent) => {
     e?.stopPropagation();
     if (currentSpreadIndex < currentBook.spreads.length - 1) {
+      setDirection(1);
       setCurrentSpreadIndex(prev => prev + 1);
     }
   };
@@ -121,6 +124,7 @@ const Portfolio = () => {
   const prevSpread = (e?: React.MouseEvent) => {
     e?.stopPropagation();
     if (currentSpreadIndex > 0) {
+      setDirection(-1);
       setCurrentSpreadIndex(prev => prev - 1);
     }
   };
@@ -256,35 +260,59 @@ const Portfolio = () => {
                       {/* 1. BOOK PREVIEW AREA (2/3 width) */}
                       <div className="lg:col-span-2 flex flex-col items-center w-full">
                         
-                        <motion.div 
-                          initial={{ rotateY: 90, opacity: 0 }}
-                          animate={{ rotateY: 0, opacity: 1 }}
-                          transition={{ type: "spring", stiffness: 50, damping: 15 }}
-                          className="relative w-full aspect-[3/2] bg-transparent perspective-2000 mb-6"
-                        >
-                          <div className="w-full h-full relative flex items-center justify-center">
-                            {/* Left Page */}
-                            <div className="relative w-[48%] h-auto shadow-2xl bg-[#fdfbf7] origin-right">
-                               <div className="absolute inset-0 pointer-events-none mix-blend-multiply opacity-10 bg-noise" />
-                               <div className="absolute right-0 top-0 bottom-0 w-8 bg-gradient-to-l from-black/20 to-transparent pointer-events-none z-10" />
-                               <img 
-                                  src={currentBook.spreads[currentSpreadIndex].leftSrc} 
-                                  alt="Left page"
-                                  className="w-full h-full object-contain"
-                               />
-                            </div>
-                            {/* Right Page */}
-                            <div className="relative w-[48%] h-auto shadow-2xl bg-[#fdfbf7] origin-left">
-                               <div className="absolute inset-0 pointer-events-none mix-blend-multiply opacity-10 bg-noise" />
-                               <div className="absolute left-0 top-0 bottom-0 w-8 bg-gradient-to-r from-black/20 to-transparent pointer-events-none z-10" />
-                               <img 
-                                  src={currentBook.spreads[currentSpreadIndex].rightSrc} 
-                                  alt="Right page"
-                                  className="w-full h-full object-contain"
-                               />
-                            </div>
-                          </div>
-                        </motion.div>
+                        <div className="relative w-full aspect-[4/3] sm:aspect-[3/2] bg-transparent perspective-2000 mb-6">
+                          <AnimatePresence initial={false} custom={direction} mode="wait">
+                            <motion.div 
+                              key={currentSpreadIndex}
+                              custom={direction}
+                              initial={{ 
+                                rotateY: direction > 0 ? 30 : -30, 
+                                opacity: 0,
+                                x: direction > 0 ? 20 : -20 
+                              }}
+                              animate={{ 
+                                rotateY: 0, 
+                                opacity: 1,
+                                x: 0 
+                              }}
+                              exit={{ 
+                                rotateY: direction > 0 ? -30 : 30, 
+                                opacity: 0,
+                                x: direction > 0 ? -20 : 20 
+                              }}
+                              transition={{ 
+                                type: "spring", 
+                                stiffness: 150, 
+                                damping: 25,
+                                mass: 0.8,
+                                opacity: { duration: 0.2 }
+                              }}
+                              className="w-full h-full relative flex items-center justify-center"
+                              style={{ transformStyle: 'preserve-3d' }}
+                            >
+                              {/* Left Page */}
+                              <div className="relative w-[48%] h-auto shadow-2xl bg-[#fdfbf7] origin-right">
+                                <div className="absolute inset-0 pointer-events-none mix-blend-multiply opacity-10 bg-noise" />
+                                <div className="absolute right-0 top-0 bottom-0 w-8 bg-gradient-to-l from-black/20 to-transparent pointer-events-none z-10" />
+                                <img 
+                                    src={currentBook.spreads[currentSpreadIndex].leftSrc} 
+                                    alt="Left page"
+                                    className="w-full h-full object-contain"
+                                />
+                              </div>
+                              {/* Right Page */}
+                              <div className="relative w-[48%] h-auto shadow-2xl bg-[#fdfbf7] origin-left">
+                                <div className="absolute inset-0 pointer-events-none mix-blend-multiply opacity-10 bg-noise" />
+                                <div className="absolute left-0 top-0 bottom-0 w-8 bg-gradient-to-r from-black/20 to-transparent pointer-events-none z-10" />
+                                <img 
+                                    src={currentBook.spreads[currentSpreadIndex].rightSrc} 
+                                    alt="Right page"
+                                    className="w-full h-full object-contain"
+                                />
+                              </div>
+                            </motion.div>
+                          </AnimatePresence>
+                        </div>
 
                         {/* Navigation Controls */}
                         <div className="flex justify-center items-center gap-8 w-full">
