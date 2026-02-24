@@ -117,9 +117,6 @@ const Navbar = ({ currentHash = '' }: { currentHash?: string }) => {
               alt="E-KREACJE" 
               className="h-12 sm:h-16 xl:h-[88px] w-auto object-contain transition-all duration-300 group-hover:brightness-[0.9]" 
             />
-            <span className="font-cormorant font-medium text-2xl sm:text-3xl lg:text-4xl xl:text-5xl text-accent hidden sm:block whitespace-nowrap pt-1 transition-all duration-300">
-              Aleksandra Marciniak
-            </span>
           </a>
 
           <div className="hidden lg:flex items-center gap-6 xl:gap-10">
