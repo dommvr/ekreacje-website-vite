@@ -239,7 +239,7 @@ export const pl: Dictionary = {
     },
     options: {
       layout: { label: 'Projekt layoutu', desc: 'Jednorazowa opłata. Projekt układu treści na stronie, doboru typografii, elementów ozdobnych.' },
-      typesetting: { label: 'Skład publikacji', desc: '130.00 zł / arkusz wydawniczy. Skład DTP publikacji do druku.' },
+      typesetting: { label: 'Skład publikacji', desc: '120.00 zł / arkusz wydawniczy. Skład DTP publikacji do druku.' },
       cover: { label: 'Projekt okładki', desc: 'Projekt okładki do druku (przód, tył, grzbiet).', startingPrice: 'Od 600.00 zł' },
       cover_pdf: { label: 'Projekt okładki PDF', desc: 'Projekt okładki do PDF (przód).' },
       epub: { label: 'Konwersja do ePub/mobi', desc: 'Stworzenie dostępnego pliku ePub, zgodnego z wymogami dystrybutorów.', startingPrice: 'Od 500.00 zł' },
@@ -387,7 +387,7 @@ export const en: Dictionary = {
     },
     options: {
       layout: { label: 'Layout Design', desc: 'One-time fee. Design of content layout, typography selection, decorative elements.' },
-      typesetting: { label: 'Typesetting', desc: '130.00 PLN / publishing sheet. DTP typesetting for print.' },
+      typesetting: { label: 'Typesetting', desc: '120.00 PLN / publishing sheet. DTP typesetting for print.' },
       cover: { label: 'Cover Design', desc: 'Print cover design (front, back, spine).', startingPrice: 'From 600.00 PLN' },
       cover_pdf: { label: 'PDF Cover Design', desc: 'Cover design for PDF (front only).' },
       epub: { label: 'E-book Conversion', desc: 'Creation of accessible ePub/mobi file compliant with distributor requirements.', startingPrice: 'From 500.00 PLN' },
