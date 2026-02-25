@@ -176,7 +176,7 @@ export const pl: Dictionary = {
     footerCta: "Umów rozmowę wstępną"
   },
   target: {
-    title: "Tworzysz swoją pierwszą książkę?",
+    title: "Tworzysz swoją książkę?",
     subtitle: "Przejdźmy przez to razem.",
     desc: "Wiem, że proces wydawniczy może przytłaczać, dlatego stawiam na partnerskie zasady. Nie jestem anonimową agencją – jestem Twoim bezpośrednim wsparciem. Pracuję głównie z autorami niezależnymi i prywatnymi osobami, które szukają kogoś, kto poprowadzi ich za rękę przez techniczne zawiłości przygotowania do druku.",
     cards: [

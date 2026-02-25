@@ -81,7 +81,7 @@ const AllProjectsPage = () => {
   }, [selectedProject]);
 
   return (
-    <div className="w-full pt-32 pb-20 min-h-screen px-4 sm:px-8 max-w-[1920px] mx-auto">
+    <div className="w-full pt-[88px] pb-[88px] min-h-screen px-4 sm:px-8 max-w-[1920px] mx-auto">
       <div className="flex flex-col lg:flex-row gap-12 lg:gap-20 items-start">
         
         {/* SIDEBAR NAVIGATION */}

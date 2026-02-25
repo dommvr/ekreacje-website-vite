@@ -15,7 +15,7 @@ export default function KalkulatorPage() {
   }, []);
 
   return (
-    <div className="w-full pt-28 pb-10">
+    <div className="w-full pt-16 pb-16">
       <Section id="kalkulator-content" className="space-y-16">
       
         {/* Intro Section */}

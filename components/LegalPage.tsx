@@ -34,7 +34,7 @@ const LegalPage: React.FC<LegalPageProps> = ({ doc }) => {
   };
 
   return (
-    <div className="w-full pt-32 pb-24 px-4 sm:px-8 max-w-7xl mx-auto min-h-screen">
+    <div className="w-full pt-[88px] pb-[88px] px-4 sm:px-8 max-w-7xl mx-auto min-h-screen">
       <div className="flex flex-col lg:flex-row gap-16 items-start">
         
         {/* Sidebar Navigation */}
