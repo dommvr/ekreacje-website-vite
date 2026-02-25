@@ -97,7 +97,7 @@ const MainApp = () => {
   return (
     <div className="font-sans bg-background text-primary antialiased paper-bg">
       <Navbar currentHash={currentHash} />
-      <main className="min-h-screen flex flex-col items-center w-full max-w-[1920px] mx-auto px-4 sm:px-6 lg:px-8 pb-16">
+      <main className="min-h-screen flex flex-col items-center w-full max-w-[1920px] mx-auto px-4 sm:px-6 lg:px-8">
         {isKalkulator ? (
           <KalkulatorPage />
         ) : isAllProjects ? (

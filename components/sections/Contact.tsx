@@ -18,7 +18,7 @@ const Contact = () => {
   };
 
   return (
-    <Section id="kontakt" className="mb-20">
+    <Section id="kontakt">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
         
         {/* Left: Info */}
