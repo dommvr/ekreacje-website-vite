@@ -67,7 +67,7 @@ const Navbar = ({ currentHash = '' }: { currentHash?: string }) => {
     sections.forEach((section) => observer.observe(section));
 
     return () => observer.disconnect();
-  }, [isHomePage, currentHash]);
+  }, [isHomePage]);
 
   // STRICT HIGHLIGHTING LOGIC
   const checkIsActive = (item: NavItem) => {
@@ -88,7 +88,6 @@ const Navbar = ({ currentHash = '' }: { currentHash?: string }) => {
     if (isHomePage) {
       // Rule 2: Exclude Hero (#main) and Contact (#kontakt) from highlighting
       if (activeSection === 'main' || activeSection === 'kontakt') return false;
-      if (currentHash === '#home' || currentHash === '#' || currentHash === '' || currentHash === '#kontakt') return false;
 
       // Match based on scroll spy
       if (activeSection === item.id) return true;
