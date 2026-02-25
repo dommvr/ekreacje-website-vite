@@ -6,7 +6,7 @@ import { useLanguage } from '@/context/LanguageContext';
 const Hero = () => {
   const { t } = useLanguage();
   return (
-    <Section id="main" className="pt-28 lg:pt-40 pb-20 mt-8">
+    <Section id="main" className="pb-20 mt-8">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
         {/* Left: Text Content */}
         <div className="space-y-8">
