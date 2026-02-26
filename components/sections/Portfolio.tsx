@@ -1,14 +1,30 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef, useCallback } from 'react';
 import Section from '../ui/Section';
 import { ChevronLeft, ChevronRight, X, BookOpen, ArrowLeft, ArrowRight, AlignLeft } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { getPortfolioData } from '@/data/portfolioData';
 import { cn } from '@/lib/utils';
 import { useLanguage } from '@/context/LanguageContext';
+import HTMLFlipBook from 'react-pageflip';
 
 const WORD_LIMIT = 30; // Limit words for the small designer note window
+
+// Helper component for individual pages to work with react-pageflip
+const Page = React.forwardRef<HTMLDivElement, { children: React.ReactNode; className?: string }>((props, ref) => {
+  return (
+    <div className={cn("bg-[#fdfbf7] shadow-inner overflow-hidden", props.className)} ref={ref}>
+      <div className="w-full h-full relative">
+        {props.children}
+        {/* Subtle page texture/noise */}
+        <div className="absolute inset-0 pointer-events-none mix-blend-multiply opacity-[0.03] bg-noise" />
+      </div>
+    </div>
+  );
+});
+
+Page.displayName = 'Page';
 
 const Portfolio = () => {
   const { lang, t } = useLanguage();
@@ -16,12 +32,22 @@ const Portfolio = () => {
   
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isReaderOpen, setIsReaderOpen] = useState(false);
-  const [isFullNoteOpen, setIsFullNoteOpen] = useState(false); // New state for expanded text
+  const [isFullNoteOpen, setIsFullNoteOpen] = useState(false);
   const [currentSpreadIndex, setCurrentSpreadIndex] = useState(0);
-  const [direction, setDirection] = useState(0);
+  const flipBookRef = useRef<any>(null);
 
   const currentBook = PORTFOLIO_DATA[currentIndex];
   const totalBooks = PORTFOLIO_DATA.length;
+
+  // Flatten spreads into individual pages for the flipbook
+  const pages = React.useMemo(() => {
+    const allPages: string[] = [];
+    currentBook.spreads.forEach(spread => {
+      allPages.push(spread.leftSrc);
+      allPages.push(spread.rightSrc);
+    });
+    return allPages;
+  }, [currentBook]);
 
   // --- CONTENT PREP ---
   // Split by whitespace to ensure newlines don't mess up word count
@@ -72,7 +98,6 @@ const Portfolio = () => {
   useEffect(() => {
     // When book changes, reset inner states
     setCurrentSpreadIndex(0);
-    setDirection(0);
     setIsFullNoteOpen(false);
   }, [currentIndex]);
 
@@ -113,19 +138,22 @@ const Portfolio = () => {
   };
 
   // --- READER LOGIC ---
+  const onFlip = useCallback((e: any) => {
+    // react-pageflip returns page index. Since we show 2 pages, spread index is page / 2
+    setCurrentSpreadIndex(Math.floor(e.data / 2));
+  }, []);
+
   const nextSpread = (e?: React.MouseEvent) => {
     e?.stopPropagation();
-    if (currentSpreadIndex < currentBook.spreads.length - 1) {
-      setDirection(1);
-      setCurrentSpreadIndex(prev => prev + 1);
+    if (flipBookRef.current) {
+      flipBookRef.current.pageFlip().flipNext();
     }
   };
 
   const prevSpread = (e?: React.MouseEvent) => {
     e?.stopPropagation();
-    if (currentSpreadIndex > 0) {
-      setDirection(-1);
-      setCurrentSpreadIndex(prev => prev - 1);
+    if (flipBookRef.current) {
+      flipBookRef.current.pageFlip().flipPrev();
     }
   };
 
@@ -146,7 +174,7 @@ const Portfolio = () => {
 
     window.addEventListener('keydown', handleKeyDown);
     return () => window.removeEventListener('keydown', handleKeyDown);
-  }, [isReaderOpen, isFullNoteOpen, currentSpreadIndex]);
+  }, [isReaderOpen, isFullNoteOpen]);
 
 
   return (
@@ -260,58 +288,48 @@ const Portfolio = () => {
                       {/* 1. BOOK PREVIEW AREA (2/3 width) */}
                       <div className="lg:col-span-2 flex flex-col items-center w-full">
                         
-                        <div className="relative w-full aspect-[4/3] sm:aspect-[3/2] bg-transparent perspective-2000 mb-6">
-                          <AnimatePresence initial={false} custom={direction} mode="wait">
-                            <motion.div 
-                              key={currentSpreadIndex}
-                              custom={direction}
-                              initial={{ 
-                                rotateY: direction > 0 ? 30 : -30, 
-                                opacity: 0,
-                                x: direction > 0 ? 20 : -20 
-                              }}
-                              animate={{ 
-                                rotateY: 0, 
-                                opacity: 1,
-                                x: 0 
-                              }}
-                              exit={{ 
-                                rotateY: direction > 0 ? -30 : 30, 
-                                opacity: 0,
-                                x: direction > 0 ? -20 : 20 
-                              }}
-                              transition={{ 
-                                type: "spring", 
-                                stiffness: 150, 
-                                damping: 25,
-                                mass: 0.8,
-                                opacity: { duration: 0.2 }
-                              }}
-                              className="w-full h-full relative flex items-center justify-center"
-                              style={{ transformStyle: 'preserve-3d' }}
-                            >
-                              {/* Left Page */}
-                              <div className="relative w-[48%] h-auto shadow-2xl bg-[#fdfbf7] origin-right">
-                                <div className="absolute inset-0 pointer-events-none mix-blend-multiply opacity-10 bg-noise" />
-                                <div className="absolute right-0 top-0 bottom-0 w-8 bg-gradient-to-l from-black/20 to-transparent pointer-events-none z-10" />
+                        <div className="relative w-full aspect-[4/3] sm:aspect-[3/2] bg-transparent mb-6 flex items-center justify-center overflow-visible">
+                          {/* @ts-ignore */}
+                          <HTMLFlipBook
+                            key={currentBook.id}
+                            width={500}
+                            height={700}
+                            size="stretch"
+                            minWidth={250}
+                            maxWidth={1000}
+                            minHeight={350}
+                            maxHeight={1400}
+                            maxShadowOpacity={0.5}
+                            showCover={false}
+                            mobileScrollSupport={true}
+                            onFlip={onFlip}
+                            className="portfolio-flipbook"
+                            ref={flipBookRef}
+                            useMouseEvents={true}
+                            startPage={0}
+                            drawShadow={true}
+                            flippingTime={1000}
+                            swipeDistance={30}
+                            showPageCorners={true}
+                            disableFlipByClick={false}
+                          >
+                            {pages.map((pageSrc, index) => (
+                              <Page key={`${currentBook.id}-page-${index}`}>
                                 <img 
-                                    src={currentBook.spreads[currentSpreadIndex].leftSrc} 
-                                    alt="Left page"
-                                    className="w-full h-full object-contain"
+                                  src={pageSrc} 
+                                  alt={`Page ${index + 1}`}
+                                  className="w-full h-full object-contain pointer-events-none"
                                 />
-                              </div>
-                              {/* Right Page */}
-                              <div className="relative w-[48%] h-auto shadow-2xl bg-[#fdfbf7] origin-left">
-                                <div className="absolute inset-0 pointer-events-none mix-blend-multiply opacity-10 bg-noise" />
-                                <div className="absolute left-0 top-0 bottom-0 w-8 bg-gradient-to-r from-black/20 to-transparent pointer-events-none z-10" />
-                                <img 
-                                    src={currentBook.spreads[currentSpreadIndex].rightSrc} 
-                                    alt="Right page"
-                                    className="w-full h-full object-contain"
-                                />
-                              </div>
-                            </motion.div>
-                          </AnimatePresence>
+                                {/* Spine shadow for inner pages */}
+                                <div className={cn(
+                                  "absolute top-0 bottom-0 w-12 pointer-events-none z-10",
+                                  index % 2 === 0 
+                                    ? "right-0 bg-gradient-to-l from-black/15 to-transparent" // Left page shadow
+                                    : "left-0 bg-gradient-to-r from-black/15 to-transparent"  // Right page shadow
+                                )} />
+                              </Page>
+                            ))}
+                          </HTMLFlipBook>
                         </div>
 
                         {/* Navigation Controls */}
