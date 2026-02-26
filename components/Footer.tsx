@@ -20,7 +20,7 @@ const Footer = () => {
         {/* Left Side: Logo/Text + Social Icons side-by-side on desktop */}
         <div className="flex flex-col md:flex-row items-center gap-6 md:gap-8 text-center md:text-left">
           <div>
-            <h2 className="text-xl font-serif font-bold tracking-tight text-primary">E-KREACJE ALEKSANDRA MARCINIAK</h2>
+            <h2 className="text-xl font-serif font-bold tracking-tight text-primary">ALEKSANDRA MARCINIAK</h2>
             <p className="text-sm opacity-60 mt-1 text-muted">© {new Date().getFullYear()} {t.footer.rights}</p>
           </div>
           
