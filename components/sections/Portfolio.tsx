@@ -369,7 +369,7 @@ const Portfolio = () => {
                           <X size={24} />
                         </button>
 
-                        <div className="space-y-6">
+                        <div className="space-y-6 mt-4">
                           <div>
                             <h3 className="font-serif text-2xl font-bold text-primary mb-1">{currentBook.title}</h3>
                             {currentBook.author && (
@@ -426,7 +426,7 @@ const Portfolio = () => {
                         <X size={32} />
                       </button>
 
-                      <div className="max-w-2xl mx-auto w-full space-y-10">
+                      <div className="max-w-2xl mx-auto w-full space-y-10 mt-8">
                         <div className="space-y-4 border-b border-accent/20 pb-8">
                           <span className="text-accent font-bold uppercase tracking-widest text-sm block">
                             {t.portfolio.notesTitle}
