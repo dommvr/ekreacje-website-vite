@@ -151,8 +151,8 @@ Ostatecznie opracowałam dwie koncepcje okładki:
       coverSrc: "https://storage.googleapis.com/ekreacje-assets/3_cover.png",
       spreads: [
         {
-          leftSrc: "https://storage.googleapis.com/ekreacje-assets/3.0_page.png",
-          rightSrc: "https://storage.googleapis.com/ekreacje-assets/3.1_page.png",
+          leftSrc: "https://storage.googleapis.com/ekreacje-assets/3.6_page.png",
+          rightSrc: "https://storage.googleapis.com/ekreacje-assets/3.7_page.png",
         },
         {
           leftSrc: "https://storage.googleapis.com/ekreacje-assets/3.2_page.png",
@@ -329,7 +329,7 @@ export const getAllProjectsData = (lang: 'pl' | 'en'): AllProjectItem[] => {
       title: isEn ? "A Sensory Journey" : "Podróż dla zmysłów",
       category: isEn ? "Other" : "Inne",
       images: [
-        "https://storage.googleapis.com/ekreacje-assets/mockup_zmyslow_1.jpg"
+        "https://storage.googleapis.com/ekreacje-assets/mockup_zmyslow_1.1.jpg"
       ]
     }
   ];
