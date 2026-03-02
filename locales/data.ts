@@ -284,9 +284,9 @@ export const en: Dictionary = {
   },
   hero: {
     title: "Your story deserves a premium setting",
-    subtitle: "Writing a gripping thriller, atmospheric poetry, or epic sci-fi? I'll ensure your book's form matches the quality of its content.",
+    subtitle: "Writing a gripping thriller, atmospheric poetry, or epic novels? I'll ensure your book's form matches the quality of its content.",
     desc1: "I offer comprehensive cover design and precise text typesetting. From refined typography to technical print preparation – I handle the entire visual process. I create aesthetic, readable layouts that build author authority and reader comfort.",
-    desc2: "Let's act specifically and without unnecessary distance. I have availability for the next month – let's check if we are a good design match.",
+    desc2: "Let's act specifically and without unnecessary distance. Let's check if we are a good design match.",
     quote: "Need a quote? Send a short description of your book.",
     cta: "Request a quote"
   },
@@ -298,7 +298,7 @@ export const en: Dictionary = {
     whatIdoDesc: "My scope of work covers everything necessary for your manuscript to become a professional publication.",
     list: [
       "Cover design (front, back, spine) adapted to the technical requirements of the selected print house.",
-      "Professional text typesetting (including attention to widows, orphans, and correct hyphenation).",
+      "Professional text typesetting (attention to the technical foundations of the publication and correct typographic form).",
       "Interior architecture: selection of readable fonts, designing headers, table of contents, and chapters.",
       "Print file preparation (DTP): setting bleeds, safety margins, and appropriate color profiles.",
       "E-book composition (EPUB/MOBI) based on the finished interior design."
@@ -308,7 +308,7 @@ export const en: Dictionary = {
     processSteps: [
       { title: "Consultation & Plan:", desc: "We discuss your expectations and the book's vibe, jointly setting the schedule, scope, and budget." },
       { title: "Cover Concept:", desc: "I prepare a cover proposal." },
-      { title: "Interior Design & Typesetting:", desc: "I select fonts, typefaces, and text aesthetics." },
+      { title: "Interior Design & Typesetting:", desc: "I select the appropriate typeface and take care of the aesthetics, layout, and readability of the text." },
       { title: "Finalization:", desc: "You receive PDF files ready for print or online distribution." }
     ],
     pricingTitle: "What determines the price?",
@@ -317,7 +317,7 @@ export const en: Dictionary = {
     pricingListTitle: "Indicative pricing:",
     pricingList: [
       { label: "Cover design:", value: "from 350 PLN" },
-      { label: "Interior typesetting (fiction):", value: "from 100 PLN per sheet (40,000 characters with spaces, approx. 22 pages)" },
+      { label: "Interior typesetting (fiction):", value: "from 120 PLN per sheet (40,000 characters with spaces, approx. 22 pages)" },
       { label: "E-book (EPUB3):", value: "from 350 PLN" }
     ],
     pricingCta: "Calculate cost in calculator",
@@ -326,12 +326,12 @@ export const en: Dictionary = {
     footerCta: "Book a preliminary call"
   },
   target: {
-    title: "Creating your first book?",
+    title: "Creating your book?",
     subtitle: "Let's go through it together.",
     desc: "I know the publishing process can be overwhelming, so I focus on partnership. I am not an anonymous agency – I am your direct support. I work mainly with independent authors and private individuals looking for someone to guide them through the technical intricacies of print preparation.",
     cards: [
       { title: "For Debutants", desc: "If this is your first time, I will ensure your print-ready layout is technically perfect and the process clear and stress-free." },
-      { title: "For Literature Authors", desc: "Your poetry, thriller, or sci-fi will receive a setting (including professional cover design) that reflects their unique character." },
+      { title: "For Literature Authors", desc: "Your poetry, thriller, or novel will receive a setting (including professional cover design) that reflects their unique character." },
       { title: "For Private Publishers", desc: "I create refined interior layouts for projects requiring intimacy and attention to detail unattainable in mass production." }
     ],
     footer: "We operate without unnecessary formalism. We talk directly, look for the best solutions for your budget, and refine every detail of the book's typography together."
@@ -382,19 +382,19 @@ export const en: Dictionary = {
     ctaContact: "Contact for offer",
     ctaPortfolio: "See portfolio",
     fields: {
-      chars: "Number of characters",
+      chars: "Number of characters in text",
       charsHint: "(including spaces)",
-      sheets: "Publishing sheets",
+      sheets: "Number of publishing sheets",
       sheetsHint: "(1 sheet per started 40,000 characters)"
     },
     options: {
       layout: { label: 'Layout Design', desc: 'One-time fee. Design of content layout, typography selection, decorative elements.' },
-      typesetting: { label: 'Typesetting', desc: '120.00 PLN / publishing sheet. DTP typesetting for print.' },
+      typesetting: { label: 'Typesetting', desc: '120.00 PLN / publishing sheet. DTP typesetting of the publication for print.' },
       cover: { label: 'Cover Design', desc: 'Print cover design (front, back, spine).', startingPrice: 'From 600.00 PLN' },
       cover_pdf: { label: 'PDF Cover Design', desc: 'Cover design for PDF (front only).' },
       epub: { label: 'E-book Conversion', desc: 'Creation of accessible ePub/mobi file compliant with distributor requirements.', startingPrice: 'From 350.00 PLN' },
-      tables: { label: 'Tables', desc: '10.00 PLN / table. Enter the number of tables.', unit: 'table' },
-      illustrations: { label: 'Illustrations', desc: '10.00 PLN / illustration. Enter the number of illustrations.', unit: 'illustration' },
+      tables: { label: 'Tables', desc: '10.00 PLN / table. Enter the number of tables in the content of the publication.', unit: 'table' },
+      illustrations: { label: 'Illustrations', desc: '10.00 PLN / illustration. Enter how many illustrations the content contains.', unit: 'illustration' },
       pdf_access: { label: 'Accessible PDF', desc: 'File adjustment to WCAG requirements (indicative price for standard publication).' },
     },
     total: "Estimated Total",
