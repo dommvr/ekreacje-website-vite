@@ -561,29 +561,195 @@ adres: 95-070 Rąbień AB, ul. Malwowa 29/1A`
 export const PRIVACY_POLICY_EN: LegalDocument = {
   id: "polityka-prywatnosci",
   title: "Privacy Policy",
-  lastUpdated: "24.05.2024",
+  lastUpdated: "28.02.2026",
   version: "1.0",
   sections: [
     {
-      id: "cel",
-      title: "Purpose and Scope of Data Collection",
-      content: `The Administrator processes Users' personal data for the purpose of providing design services, communication, and direct marketing of own services.
+      id: "administrator",
+      title: "1) Data Controller and Contact Details",
+      content: `Legal basis: GDPR (RODO) Article 13(1)(a)
 
-Data is collected exclusively to the extent necessary to achieve the specified purpose, based on User consent or legal provisions. In the case of contact via the form, the email address and message content are collected, allowing for the preparation of an individual quote and response to the inquiry.`
+The controller of your personal data (data controller) is:
+HYGGE e-Kreacje Sp. z o.o., Tax Identification Number (NIP): 732-22-188-14
+Address: 95-070 Rąbień AB, ul. Malwowa 29/1A
+E-mail: contact@aleksandramarciniak.com
+
+Representative in the EU:
+Not applicable (the controller is established in Poland).`
+    },
+    {
+      id: "iod",
+      title: "2) Data Protection Officer (DPO)",
+      content: `Legal basis: GDPR (RODO) Article 13(1)(b)
+
+We have not appointed a Data Protection Officer.`
+    },
+    {
+      id: "dane",
+      title: "3) What data we process",
+      content: `Legal basis: GDPR (RODO) Article 12(1) and Article 13(1)(c)
+
+Below, we describe the data by specific processes on the website:
+
+A) “Contact” form
+- Data provided by you: e-mail address, message content.
+- Technical data related to submission of the form (if logged on the server side): e.g. date and time of submission, IP address, browser information (User-Agent), request URL/parameters.
+- For the technical handling of message transmission from the contact form, we may use an external e-mail infrastructure provider, which processes the data contained in the message and selected technical data related to its transmission, to the extent necessary for delivery and handling of the message.
+
+B) Standard server logs (if maintained)
+- Technical data: IP address, date and time, requested resource (URL), response code, User-Agent, referrer (if sent by the browser), error information.
+- Note: an IP address may constitute personal data, including when it is dynamic, if the controller has legally available means enabling identification (e.g. through the Internet access provider in certain circumstances).
+
+C) Cookie storing language preference
+- Cookie identifier and its content: exclusively information about the selected language (e.g. “pl”, “en”).
+- We do not use marketing or analytics cookies (according to the functionality description provided for this policy).
+
+D) GeoIP for setting the default language
+- Input: IP address used solely for a one-time determination of country/region.
+- Output: country/region code (On our side, we do not retain the raw IP; the GeoIP service provider may temporarily log queries in accordance with its own documentation.).
+- Retention: only for the duration of the session (in RAM), without storage in a database.`
+    },
+    {
+      id: "cele",
+      title: "4) Purposes and legal bases of processing",
+      content: `Legal basis: GDPR (RODO) Article 12(1) and Article 13(1)(c)
+
+4.1 Responding to an inquiry (“Contact” form)
+Legal basis: GDPR (RODO) Article 6(1)(f) and GDPR (RODO) Article 13(1)(c); information obligation: GDPR (RODO) Articles 12-13
+
+- Data: e-mail, message content; possibly technical transmission metadata (Section 3A).
+- Purpose: to provide a response and conduct correspondence concerning your inquiry.
+- Justification of the legal basis (Article 6(1)(f)): our legitimate interest is communication with persons who themselves initiate contact and handling inquiries.
+- Retention: until the correspondence is concluded, and thereafter for the period necessary to protect against claims or to pursue claims (criterion: limitation period for claims), where applicable; details in Section 7.
+- Recipients: entities providing hosting services, e-mail handling services, and infrastructure for sending messages from the contact form (Section 5), in particular Vercel, Google / Gmail, and Mailjet.
+- Transfers outside the EEA: may occur (Section 6), depending on the manner in which services are provided by the providers and their subprocessors.
+
+4.2 Security and prevention of abuse (server logs)
+Legal basis: GDPR (RODO) Article 6(1)(f) and GDPR (RODO) Article 13(1)(c); information obligation: GDPR (RODO) Articles 12-13
+
+- Data: server logs described in Section 3B (including IP address).
+- Purpose: ensuring service security, detecting errors, protection against abuse (e.g. attacks, intrusion attempts), incident analysis.
+- Justification of the legal basis (Article 6(1)(f)): our legitimate interest is the security of the website and users, and protection against abuse.
+- Retention: 1 hour from the date of the event, and in the event of a security incident, until it is clarified and the matter is closed.
+- Recipients: Vercel Inc., USA (third country, outside the EEA).
+- Transfers outside the EEA: yes, to the USA (Section 6).
+
+4.3 Language preference cookie
+Legal basis: GDPR (RODO) Article 6(1)(f) and GDPR (RODO) Article 13(1)(c); additionally: Electronic Communications Law (Prawo komunikacji elektronicznej) Articles 399-400
+
+- Data: cookie identifier and information about the selected language (Section 3C).
+- Purpose: to remember the language preference and display the website in the selected language on subsequent page views.
+- Justification of the legal basis (Article 6(1)(f)): our interest is to improve the website’s usability by remembering the user’s choice.
+- Retention: until the cookie expires or is deleted by the user: 12 months.
+- Recipients: as a rule, the hosting provider (Section 5); no other recipients in connection with this cookie.
+- Transfers outside the EEA: yes, to the USA (Section 6).
+
+4.4 GeoIP for setting the default language
+Legal basis: GDPR (RODO) Article 6(1)(f) and GDPR (RODO) Article 13(1)(c); information obligation: GDPR (RODO) Articles 12-13
+
+- Data:
+  • Input: IP address used solely for a one-time determination of country/region.
+  • Output: country/region code (On our side, we do not retain the raw IP; the GeoIP service provider may temporarily log queries in accordance with its documentation.).
+- Purpose: to set the website’s default language on the first visit in order to facilitate use.
+- Justification of the legal basis (Article 6(1)(f)): our interest is to tailor the language in a manner minimally intrusive to privacy (only the country/region code and only during the session).
+- Retention: session only (in memory), no permanent record.
+- Recipients: ipapi.co (Kloudend, Inc.), USA (third country, outside the EEA).
+- Transfers outside the EEA: no (Section 6).`
+    },
+    {
+      id: "odbiorcy",
+      title: "5) Data recipients / service providers",
+      content: `Legal basis: GDPR (RODO) Article 13(1)(e)
+
+We use the services of entities that may process data on our behalf (processors), in particular:
+- Hosting/server: Vercel Inc., USA (third country, outside the EEA).
+- E-mail (handling correspondence): Google / Gmail (Google LLC), USA (third country, outside the EEA).
+- Infrastructure for sending messages from the contact form: Mailjet (a Sinch Email service; the exact company within the Sinch group in accordance with the concluded agreement / service account) – provider of the technical handling of e-mail message transmission.
+- Anti-spam / form security: not applicable.
+- GeoIP: ipapi.co (Kloudend, Inc.), USA (third country, outside the EEA).
+
+We do not disclose data to other recipients, unless:
+- this is required by law, or
+- it is necessary to establish, pursue, or defend claims.`
+    },
+    {
+      id: "transfery",
+      title: "6) Transfers of data outside the EEA",
+      content: `Legal basis: GDPR (RODO) Article 13(1)(f)
+
+In connection with the use of certain providers, data may be transferred outside the European Economic Area. This applies in particular to providers of hosting services, e-mail services, and message transmission infrastructure. Transfers are carried out using mechanisms compliant with the GDPR (RODO), in particular on the basis of Standard Contractual Clauses (SCCs) or other legally permissible transfer mechanisms, depending on the given provider and its subprocessors.`
+    },
+    {
+      id: "retencja",
+      title: "7) Data retention period",
+      content: `Legal basis: GDPR (RODO) Article 13(2)(a)
+
+- “Contact” form: until the correspondence is concluded, and thereafter for the period necessary to protect against claims or to pursue claims (criterion: limitation period for claims), if justified by the circumstances of the matter.
+- Server logs: 1 hour, and in the event of a security incident, until clarification.
+- Language preference cookie: until the cookie expires or is deleted by the user: 12 months.
+- GeoIP: On our side, we do not retain the raw IP; the GeoIP service provider may temporarily log queries in accordance with its documentation..`
     },
     {
       id: "prawa",
-      title: "User Rights",
-      content: `Every User has the right to access their data, correct it, delete it ("right to be forgotten"), and restrict its processing.
+      title: "8) Rights of the data subject and how to exercise them",
+      content: `Legal basis: GDPR (RODO) Article 12(1)-(6) and Article 13(2)(b)-(d)
 
-The User may withdraw consent for data processing at any time, which does not affect the lawfulness of processing based on consent before its withdrawal. Please direct any requests in this regard to the email address provided in the Contact section.`
+You have the following rights:
+- access to data (GDPR (RODO) Article 15),
+- rectification (GDPR (RODO) Article 16),
+- erasure (GDPR (RODO) Article 17),
+- restriction of processing (GDPR (RODO) Article 18),
+- data portability (GDPR (RODO) Article 20) – where processing is carried out on the basis of a contract or consent and by automated means,
+- objection (GDPR (RODO) Article 21) – where the basis is our legitimate interest (Article 6(1)(f)).
+
+How to submit a request:
+- Write to: contact@aleksandramarciniak.com
+
+Rules for handling requests:
+- We respond without undue delay, no later than within the time limits specified in the GDPR (RODO).
+- We may request additional information if we must confirm the identity of the person submitting the request (only to the extent necessary).
+
+Withdrawal of consent:
+- In the processes described, we do not base processing on consent (Article 6(1)(a)), so withdrawal of consent, as a rule, does not apply. If, in the future, we introduce a process based on consent, we will inform you of this and enable its withdrawal as easily as it was given.`
+    },
+    {
+      id: "skarga",
+      title: "9) Complaint to the President of the Personal Data Protection Office (Prezes UODO)",
+      content: `Legal basis: GDPR (RODO) Article 13(2)(d)
+
+If you consider that the processing of your data violates the law, you have the right to lodge a complaint with the President of the Personal Data Protection Office (Urząd Ochrony Danych Osobowych, UODO).
+Current information on how to lodge a complaint can be found on the UODO website.`
+    },
+    {
+      id: "obowiazek",
+      title: "10) Whether provision of data is mandatory and consequences of failure to provide it",
+      content: `Legal basis: GDPR (RODO) Article 13(2)(e)
+
+- “Contact” form: providing your e-mail address and message content is voluntary, but necessary for us to respond. Without these data, we will not process the inquiry.
+- Server logs: technical data (e.g. IP) are transmitted automatically by the device and browser while using the website.
+- Language cookies: you may use the website without remembering your language preference; in that case, the language may not be remembered between visits.
+- GeoIP: serves solely to set the default language; if it does not work, the language can be changed manually.`
+    },
+    {
+      id: "profilowanie",
+      title: "11) Automated decision-making and profiling",
+      content: `Legal basis: GDPR (RODO) Article 13(2)(f) and GDPR (RODO) Article 22
+
+We do not apply automated decision-making or profiling within the meaning of the GDPR (RODO).`
     },
     {
       id: "bezpieczenstwo",
-      title: "Data Security",
-      content: `We employ advanced technical and organizational measures to ensure the protection of processed personal data appropriate to the threats and categories of data protected.
+      title: "12) Data security and amendments to the document",
+      content: `Legal basis: GDPR (RODO) Article 32 and GDPR (RODO) Article 12(1)
 
-In particular, we secure data against unauthorized disclosure, takeover by an unauthorized person, processing in violation of the act, and change, loss, damage, or destruction.`
+We apply organizational and technical measures adequate to the risks of processing, in particular:
+- restrictions on access to data,
+- system updates and safeguards,
+- the principle of minimization (we process only what is necessary for the indicated purposes),
+- rotation and access control for logs (if maintained).
+
+Changes to the Policy:
+We may update the policy if the manner in which the website operates, the scope of data, or the law changes. The current version is published on the website.`
     }
   ]
 };
@@ -591,22 +757,140 @@ In particular, we secure data against unauthorized disclosure, takeover by an un
 export const COOKIES_POLICY_EN: LegalDocument = {
   id: "polityka-cookies",
   title: "Cookies Policy",
-  lastUpdated: "24.05.2024",
+  lastUpdated: "28.02.2026",
   version: "1.0",
   sections: [
     {
-      id: "definicja",
-      title: "What are cookies?",
-      content: `Cookies are IT data, in particular text files, which are stored on the Service User's end device and are intended for using the Service's websites.
+      id: "about",
+      title: "1) What this document is about",
+      content: `This Policy describes how the website uses cookies and similar technologies (e.g., local storage), that is, how we store information or gain access to information on your terminal device (computer/phone/tablet).
 
-Cookies usually contain the name of the website they come from, the time they are stored on the end device, and a unique number.`
+On the website, we use only the necessary and functional technologies described below:
+- to remember language preferences
+We do not use analytics or advertising cookies.
+
+Legal basis: Electronic Communications Law (Prawo komunikacji elektronicznej, the “PKE”), Article 399(1); GDPR (RODO), Article 12(1)`
     },
     {
-      id: "rodzaje",
-      title: "Types and Purpose of Use",
-      content: `The Service uses two basic types of cookies: "session" cookies and "persistent" cookies.
+      id: "definitions",
+      title: "2) Definitions",
+      content: `- Cookies (cookie files) – small text files stored in the browser or read by the website.
+- Local storage / session storage – browser mechanisms that make it possible to store information in the device memory (respectively: until deletion or until the end of the session).
+- “Gaining access to information on a terminal device” – concerns not only storing information, but also reading information already stored (e.g., reading the value of a cookie or local storage).
 
-Session cookies are temporary files that are stored on the User's end device until logging out, leaving the website, or turning off the software (web browser).`
+Practical note: the obligations under the PKE concern the very act of storing/reading in the terminal device, regardless of whether that information constitutes personal data.
+
+Legal basis: PKE, Article 399(1); GDPR, Article 12(1)`
+    },
+    {
+      id: "technologies",
+      title: "3) What technologies we use on the website",
+      content: `3.1 Functional technology relating to language selection
+On the website, we use technology intended to remember the language selected by the user, so that on subsequent page views the service can display the appropriate language version.
+
+- Name: ekreacje_lang
+- Type: cookie
+- Purpose: to remember the selected website language (PL/EN)
+- Scope of information: language code only (e.g., “pl” / “en”)
+- Storage period: 12 months
+
+The ekreacje_lang cookie is set only after the user has manually selected the language (e.g., by clicking the language switch on the website). During the first visit, the language may be selected automatically based on the browser settings or other technical parameters; however, that information is not stored in this cookie until the user makes an express selection.
+
+3.2 Other technologies necessary to remember the user’s choice
+On the website, we also use a browser local data storage mechanism (localStorage) in order to remember the user’s decision regarding cookies and similar technologies.
+
+- Name: ekreacje_cookie_consent
+- Type: localStorage (this is not a cookie)
+- Purpose: to remember the user’s decision to accept or reject cookies and similar technologies
+- Scope of information: information about the choice made
+- Storage period: indefinitely, until deleted by the user or until the browser data are cleared
+
+This technology is technical in nature and serves solely to preserve the user’s choice so that the notice is not displayed again on each visit.
+
+Legal basis: PKE, Article 399(1) and Article 399(3), item 2 (with respect to technologies necessary to provide a function requested by the user)`
+    },
+    {
+      id: "categories",
+      title: "4) Categories of cookies and whether consent is required",
+      content: `Below, we clearly indicate when we ask for consent and when the exception under the PKE applies.
+
+4.1 Necessary cookies
+- Consent: not required if the cookie is necessary to carry out the transmission of an electronic communication or to provide a service requested by the user (e.g., the basic operation of the website).
+- How we understand “necessary”: without these cookies, the website or a specific function expressly initiated by the user would not operate properly.
+
+Legal basis: PKE, Article 399(3), items 1-2
+
+4.2 Preference cookies (language)
+- Consent: as a rule, preference cookies may require consent unless they meet the exception of being “necessary for a service requested by the user.”
+- How this works for us: the language cookie serves solely to remember the language choice.
+  • We set it only after the user selects the language: The ekreacje_lang cookie is set only after the user manually selects the language (by clicking the PL/EN switch in the navigation menu). During the first visit, the language is selected automatically (based on GeoIP or the browser language) and stored only in the application state, but it is not then stored as a cookie.
+  • If it is set only after selection, we treat it as necessary to provide the service in the selected language (exception under Article 399(3), item 2 of the PKE) and we do not request additional consent solely for this one cookie.
+
+If, in the future, the language cookie (or any other preference cookie) is set automatically without user action and is not “necessary” within the meaning of the PKE, we will implement a consent mechanism in the banner/panel.
+
+Legal basis: PKE, Article 399(3), item 2; Article 400; GDPR, Article 12(1)
+
+4.3 Analytics and marketing cookies
+We do not use them.
+- Consent: would be required before activation (prior, voluntary, and informed), but this category does not occur on the website.
+
+Legal basis: PKE, Article 399(1), items 1-2; Article 400`
+    },
+    {
+      id: "local-storage",
+      title: "5) Cookies and other local data storage technologies",
+      content: `On the website, we use only technologies necessary for its proper operation and for remembering the user’s choices. We do not use analytics, marketing, or advertising cookies.
+
+- ekreacje_lang
+This is a cookie used to remember the selected website language (PL/EN), so that on subsequent page views the service can display the appropriate language version.
+- Purpose: to remember the language choice
+- Type: cookie
+- Storage period: 12 months
+This cookie is functional in nature and serves to ensure convenience in using the website.
+
+- ekreacje_cookie_consent
+This is not a cookie, but an entry stored in the browser’s localStorage. It serves to remember the user’s decision regarding the acceptance or rejection of cookies and similar technologies, so that the notice is not displayed again on each visit.
+- Purpose: to remember the user’s decision
+- Type: localStorage
+- Storage period: indefinitely, until deleted by the user or until the browser data are cleared
+
+This mechanism is technical in nature and serves to preserve the user’s choice.
+The user may change cookie settings or delete stored local data at any time through the settings of their browser.
+Because the technologies used are limited to solutions that are necessary or that serve to remember the user’s choice, we do not use them for profiling or marketing purposes.
+
+Legal basis: PKE, Article 399(1)`
+    },
+    {
+      id: "management",
+      title: "6) How to manage cookies",
+      content: `6.1 Browser settings
+You may:
+- block cookies,
+- delete stored cookies,
+- configure cookies to be deleted when the browser is closed,
+- restrict third-party cookies (we do not use them here in any event, but browsers tend to have a life of their own).
+
+Instructions are available in your browser settings (e.g., Chrome/Firefox/Safari/Edge).
+
+6.2 Informational banner concerning cookies and similar technologies
+An informational banner concerning cookies and similar local data storage technologies is displayed on the website.
+The banner is used to:
+- inform the user about the use of cookies and similar technologies,
+- enable the user to make a decision regarding their acceptance or rejection,
+- store that decision in localStorage so that the notice is not displayed again on each visit.
+
+The banner also contains a link to this Cookie Policy. In addition, links to the Cookie Policy, Privacy Policy, and Terms and Conditions are available on the website.
+
+If optional cookies, in particular analytics or marketing cookies, are implemented on the website in the future, before their activation we will implement an appropriate consent collection mechanism, compliant with the applicable laws.
+
+Legal basis: PKE, Article 399(1) and (2), and Article 400`
+    },
+    {
+      id: "updates",
+      title: "7) Updates to the document",
+      content: `The Cookie Policy may be updated if the way the website operates changes (e.g., new categories of cookies appear) or if the law changes. The current version is published on the website.
+
+Legal basis: GDPR, Article 12(1); PKE, Article 399(1)`
     }
   ]
 };
@@ -614,20 +898,210 @@ Session cookies are temporary files that are stored on the User's end device unt
 export const REGULATIONS_EN: LegalDocument = {
   id: "regulamin",
   title: "Service Regulations",
-  lastUpdated: "24.05.2024",
+  lastUpdated: "28.02.2026",
   version: "1.0",
   sections: [
     {
-      id: "postanowienia",
-      title: "General Provisions",
-      content: `The Regulations define the rules for using services provided electronically by e-kreacje. The Service is used to present a portfolio and enables contact to obtain a quote for design services.
+      id: "informacje-ogolne",
+      title: "1) General information",
+      content: `1.1. These Terms and Conditions set out the rules for using the website operated by:
 
-All content posted on the service, including graphic designs and texts, constitutes the intellectual property of the Administrator and is subject to legal protection.`
+HYGGE e-Kreacje Sp. z o.o.
+registered office and address: 95-070 Rąbień AB, ul. Malwowa 29/1A
+Tax Identification Number (NIP): 7322218814
+National Court Register (KRS): 0001105385
+registry court: District Court for Łódź-Śródmieście in Łódź, 20th Commercial Division of the National Court Register
+share capital: PLN 5,000.00
+e-mail: kontakt@aleksandramarciniak.com
+
+hereinafter referred to as the: “Service Provider”.
+
+1.2. The Terms and Conditions are made available free of charge on the Website in a manner enabling their acquisition, reproduction, and recording.
+
+1.3. Commencement of use of the Website shall mean that the User has familiarized themselves with the Terms and Conditions and accepts their provisions to the extent necessary for the use of services provided by electronic means.`
     },
     {
-      id: "uslugi",
-      title: "Service Principles",
-      content: `Services are provided on the basis of individual agreements concluded with Clients. The calculator available on the service is for reference purposes only and does not constitute a commercial offer.`
+      id: "definicje",
+      title: "2) Definitions",
+      content: `For the purposes of these Terms and Conditions, the following meanings shall apply:
+
+2.1. Service Provider – HYGGE e-Kreacje Sp. z o.o., indicated in section 1.1.
+
+2.2. User / Service Recipient – a natural person, legal person, or organizational unit using the Website, in particular browsing content or sending a message via the Contact Form.
+
+2.3. Website – the website operated by the Service Provider at: https://aleksandramarciniak.com together with its subpages.
+
+2.4. Electronic Service – a service provided by electronic means within the meaning of the applicable laws, without the simultaneous presence of the parties, through the transmission of data at the individual request of the User, transmitted and received by means of equipment for the electronic processing and storage of data, entirely via a telecommunications network.
+
+2.5. Contact Form – a functionality of the Website enabling the sending of a message to the Service Provider, within which the User may provide an e-mail address and the content of the message.`
+    },
+    {
+      id: "rodzaje-uslug",
+      title: "3) Types and scope of Electronic Services",
+      content: `3.1. The Service Provider provides the following services by electronic means:
+
+a) making informational content available on the Website by enabling browsing of the website content, including information on graphic and design services, presentation of the offer, sample projects, contact details, and information concerning cooperation,
+
+b) enabling contact with the Service Provider by means of the Contact Form,
+
+c) determining and handling the Website’s language preference, including:
+- automatic selection of the default language during the first visit based on technical settings (e.g. browser settings or the GeoIP mechanism),
+- remembering the language manually selected by the User by means of a cookie used exclusively for that purpose.
+
+3.2. The services provided on the Website are free of charge.
+
+3.3. Use of an internet connection may involve costs on the part of the User, in accordance with the agreement concluded by the User with their telecommunications or Internet service provider.`
+    },
+    {
+      id: "warunki-swiadczenia",
+      title: "4) Conditions for the provision of services and technical requirements",
+      content: `4.1. In order to use the Website properly, the following are required:
+
+a) a device with Internet access,
+b) a current version of an internet browser (e.g. Chrome, Firefox, Safari, Edge),
+c) JavaScript enabled, since certain functions and interface elements of the Website require it for proper operation,
+d) cookie support, if the User wants the Website to remember the selected language.
+
+4.2. The User may restrict or block cookies in their browser settings. This may result in the language preference not being remembered, but as a rule should not prevent browsing of informational content.
+
+4.3. The Service Provider shall exercise due diligence to ensure that the Website operates properly on typical hardware and software configurations; however, the Service Provider does not guarantee proper operation of the Website on atypical, outdated, or software manufacturer-unsupported configurations.`
+    },
+    {
+      id: "zagrozenia",
+      title: "5) Information on specific risks and technologies used",
+      content: `5.1. Use of services provided by electronic means may involve typical risks occurring in the internet environment, in particular such as:
+- malicious software,
+- phishing attempts,
+- session hijacking,
+- operation of third-party software,
+- access to data by unauthorized persons.
+
+5.2. In order to limit the risks referred to above, the User should use an up-to-date operating system, an up-to-date internet browser, and appropriate security measures, including protective software and updates.
+
+5.3. The following technologies may be used on the Website:
+- cookies,
+- localStorage,
+- JavaScript scripts.
+
+5.4. The functions and purposes of the indicated technologies are connected exclusively with the proper operation of the Website, remembering the User’s choices, and handling the User’s preferences. Detailed information is contained in the Cookies Policy and the Privacy Policy.`
+    },
+    {
+      id: "zakaz-tresci",
+      title: "6) Prohibition on the provision of unlawful content",
+      content: `6.1. The User is obliged to use the Website in a manner compliant with the law, accepted standards of conduct (dobre obyczaje), and with respect for the rights of third parties.
+
+6.2. The User may not provide content of an unlawful nature, in particular:
+a) infringing copyright, personal rights (dobra osobiste), or legally protected secrets,
+b) containing threats, offensive, discriminatory, or hate-inciting content,
+c) containing malicious software, phishing links, or content intended to circumvent security measures,
+d) constituting spam or attempts to abuse the Contact Form.`
+    },
+    {
+      id: "formularz",
+      title: "7) Rules for using the Contact Form",
+      content: `7.1. The Contact Form is intended for sending inquiries to the Service Provider, in particular concerning the offer, cooperation, and organizational matters.
+
+7.2. Within the Contact Form, the User may provide:
+- an e-mail address,
+- the content of the message.
+
+7.3. Providing an e-mail address is necessary if the User expects a reply.
+
+7.4. A message sent by means of the form should relate to the Service Provider’s business activity or the content presented on the Website and may not infringe the provisions of these Terms and Conditions, in particular section 6.
+
+7.5. In order to limit abuse and protect against spam, the Service Provider applies security mechanisms, including a honeypot-type mechanism, and may also apply anti-spam filters, limits on the number of submissions, and temporary technical blocks in the event of detected attacks or abuse.
+
+7.6. The Service Provider does not guarantee a response within any specified period. Failure to respond shall not constitute acceptance of an offer, conclusion of an agreement, or an obligation to perform an order.`
+    },
+    {
+      id: "umowy",
+      title: "8) Conditions for the conclusion and termination of agreements for the provision of services by electronic means",
+      content: `8.1. The agreement for the provision of an Electronic Service consisting in making informational content available on the Website is concluded when the User enters the Website and commences at the moment the page is displayed.
+
+8.2. The agreement referred to in section 8.1 shall terminate when the User leaves the Website.
+
+8.3. The agreement for the provision of an Electronic Service consisting in enabling use of the Contact Form is concluded when the User commences use of that functionality.
+
+8.4. The agreement concerning the Contact Form shall terminate upon:
+a) successful sending of a message via the form, or
+b) earlier discontinuation of use of the form without sending a message.
+
+8.5. The User may terminate use of services provided by electronic means at any time by leaving the Website or discontinuing use of a given functionality.
+
+8.6. Use of Electronic Services provided on the Website does not require account registration or the conclusion of a separate agreement in writing.`
+    },
+    {
+      id: "reklamacje",
+      title: "9) Complaints and notifications concerning Electronic Services",
+      content: `9.1. The User may submit complaints concerning the functioning of the Website and the Electronic Services provided, in particular in the event of:
+- unavailability of the Website,
+- errors in the operation of the Contact Form,
+- malfunctioning of Website functions.
+
+9.2. Complaints should be submitted to the following e-mail address: contact@aleksandramarciniak.com.
+
+9.3. In a complaint notification, it is advisable to provide:
+a) the date and approximate time of occurrence of the problem,
+b) the address of the subpage (URL), if applicable,
+c) the type of device and browser,
+d) contact details for the purpose of providing a response.
+
+9.4. The Service Provider shall consider the complaint without undue delay, no later than within 14 days from the date of its receipt.`
+    },
+    {
+      id: "odpowiedzialnosc",
+      title: "10) Liability",
+      content: `10.1. The Service Provider provides services by electronic means with due diligence, taking into account the nature and scope of those services.
+
+10.2. Within the limits permitted by mandatory provisions of law, the Service Provider shall not be liable for:
+a) interruptions in the availability of the Website resulting from causes beyond the Service Provider’s control, including Internet network failures, failures on the part of telecommunications service providers or hosting providers,
+b) the consequences of using the Website in a manner contrary to these Terms and Conditions or provisions of law,
+c) damage resulting from the use of the Website on devices or software that do not meet the technical requirements specified in these Terms and Conditions.
+
+10.3. If the Website contains links to external websites, the Service Provider shall not be responsible for the content, policies, or operation of such websites, unless such liability arises directly from provisions of law.`
+    },
+    {
+      id: "prawa-autorskie",
+      title: "11) Copyright and ownership of content",
+      content: `11.1. Content made available on the Website, in particular texts, graphics, logos, the website layout, visual identity elements, and other materials, may constitute works protected by copyright or be protected on other legal grounds.
+
+11.2. Use of the Website’s content is permitted solely within the scope of personal use and within the limits permitted by provisions of law.
+
+11.3. Without the prior consent of the Service Provider or another authorized entity, it is prohibited in particular to copy, distribute, modify, or use the Website’s content for commercial purposes, unless otherwise follows from mandatory provisions of law.`
+    },
+    {
+      id: "ograniczenia",
+      title: "12) Restriction or suspension of access in the event of abuse",
+      content: `12.1. The Service Provider may temporarily restrict access to the Website or its selected functions, in particular the Contact Form, if this is necessary due to:
+a) the security of the Website,
+b) prevention of abuse, spam, or attacks,
+c) the performance of service, technical, or maintenance works.
+
+12.2. If the restriction concerns only the Contact Form, the User may contact the Service Provider directly via the e-mail address indicated in these Terms and Conditions.`
+    },
+    {
+      id: "zmiany",
+      title: "13) Amendments to the Terms and Conditions",
+      content: `13.1. The Service Provider may amend these Terms and Conditions for important reasons, in particular in the event of:
+a) a change in the functionality of the Website or the scope of Electronic Services,
+b) a change in provisions of law,
+c) the need to clarify the provisions of these Terms and Conditions,
+d) a change in the Service Provider’s identification or contact details.
+
+13.2. Amendments to the Terms and Conditions are published on the Website together with an indication of the effective date of the new version.
+
+13.3. Amendments to the Terms and Conditions shall not infringe rights acquired by Users before the effective date of the new version, insofar as such rights have arisen.`
+    },
+    {
+      id: "prawo-wlasciwe",
+      title: "14) Governing law, jurisdiction, contact",
+      content: `14.1. These Terms and Conditions shall be governed by Polish law.
+
+14.2. Disputes related to the use of the Website shall be resolved by the court having jurisdiction in accordance with the generally applicable provisions of law.
+
+14.3. Contact with the Service Provider:
+e-mail: contact@aleksandramarciniak.com
+address: 95-070 Rąbień AB, ul. Malwowa 29/1A`
     }
   ]
 };
