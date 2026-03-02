@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { LegalDocument } from '@/data/legalData';
 import { motion } from 'framer-motion';
-import { ArrowLeft, Clock } from 'lucide-react';
+import { ArrowLeft, Clock, Tag } from 'lucide-react';
 import { navigateTo } from '@/lib/utils';
 import { useLanguage } from '@/context/LanguageContext';
 
@@ -82,7 +82,8 @@ const LegalPage: React.FC<LegalPageProps> = ({ doc }) => {
                   <Clock size={16} />
                   <span>{t.legal.lastUpdated}: {doc.lastUpdated}</span>
                 </div>
-                <div className="flex items-center gap-2 pl-6">
+                <div className="flex items-center gap-2">
+                  <Tag size={16} />
                   <span>{t.legal.version}: {doc.version}</span>
                 </div>
               </div>
