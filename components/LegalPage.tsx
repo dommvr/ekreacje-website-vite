@@ -77,9 +77,14 @@ const LegalPage: React.FC<LegalPageProps> = ({ doc }) => {
               <h1 className="font-serif text-5xl md:text-6xl font-bold text-primary leading-tight">
                 {doc.title}
               </h1>
-              <div className="flex items-center gap-2 text-muted text-sm font-medium uppercase tracking-widest">
-                <Clock size={16} />
-                <span>{t.legal.lastUpdated}: {doc.lastUpdated}</span>
+              <div className="flex flex-col items-start gap-2 text-muted text-sm font-medium uppercase tracking-widest">
+                <div className="flex items-center gap-2">
+                  <Clock size={16} />
+                  <span>{t.legal.lastUpdated}: {doc.lastUpdated}</span>
+                </div>
+                <div className="flex items-center gap-2 pl-6">
+                  <span>{t.legal.version}: {doc.version}</span>
+                </div>
               </div>
             </header>
 

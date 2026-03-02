@@ -119,6 +119,7 @@ export interface Dictionary {
     returnHome: string;
     tableOfContents: string;
     lastUpdated: string;
+    version: string;
   };
 }
 
@@ -266,7 +267,8 @@ export const pl: Dictionary = {
   legal: {
     returnHome: "Wróć do strony głównej",
     tableOfContents: "Spis treści",
-    lastUpdated: "Ostatnia aktualizacja"
+    lastUpdated: "Ostatnia aktualizacja",
+    version: "Wersja"
   }
 };
 
@@ -414,6 +416,7 @@ export const en: Dictionary = {
   legal: {
     returnHome: "Return to home page",
     tableOfContents: "Table of Contents",
-    lastUpdated: "Last updated"
+    lastUpdated: "Last updated",
+    version: "Version"
   }
 };
