@@ -51,7 +51,8 @@ In the cover design, I focused on minimalism, geometry, and repetition. Dark col
             rightSrc: "https://storage.googleapis.com/ekreacje-assets/2.2_page.png",
           }
         ],
-        designNotes: `The goal was to create an original edition of H.C. Andersen's tales, departing from typically childish, richly illustrated editions. I focused on a slightly older audience. My priority was purity of form and elegance, allowing the content to resonate without distracting the reader with unnecessary ornaments.
+        designNotes: `Fairy Tales by Hans Christian Andersen
+The goal was to create an original edition of H.C. Andersen's tales, departing from typically childish, richly illustrated editions. I focused on a slightly older audience. My priority was purity of form and elegance, allowing the content to resonate without distracting the reader with unnecessary ornaments.
 I wanted to maintain modern minimalism and a design for a multi-page narrative that retains lightness and readability. I also had to decide whether the cover would operate with a literal image or rather with atmosphere and color.
 I chose classic serif typography, giving the publication a dignified character.
 Page Architecture: The interior is characterized by a large amount of "white space", ensuring text blocks don't overwhelm. I used wide margins and thoughtful leading, increasing comfort for long reading sessions.
@@ -69,8 +70,16 @@ Ultimately, I developed two cover concepts:
         coverSrc: "https://storage.googleapis.com/ekreacje-assets/3_cover.png",
         spreads: [
           {
-            leftSrc: "https://storage.googleapis.com/ekreacje-assets/3.1_page.png",
-            rightSrc: "https://storage.googleapis.com/ekreacje-assets/3.2_page.png",
+            leftSrc: "https://storage.googleapis.com/ekreacje-assets/3.0.2_page.png",
+            rightSrc: "https://storage.googleapis.com/ekreacje-assets/3.1_page.png",
+          },
+          {
+            leftSrc: "https://storage.googleapis.com/ekreacje-assets/3.2_page.png",
+            rightSrc: "https://storage.googleapis.com/ekreacje-assets/3.3_page.png",
+          },
+          {
+            leftSrc: "https://storage.googleapis.com/ekreacje-assets/3.4_page.png",
+            rightSrc: "https://storage.googleapis.com/ekreacje-assets/3.5_page.png",
           }
         ],
         designNotes: `Dr. Dolittle and His Animals - Hugh Lofting
@@ -81,6 +90,39 @@ Reading Comfort: I increased the font size and leading so younger readers could 
 Typography: As a base, I chose a readable, classic serif typeface. For contrast, chapter titles were set in decorative, calligraphic script. This introduces an element of magic and "old style".
 Initials: Large, decorative initials at the start of chapters serve as visual signposts and decoration.
 I designed the cover in a retro spirit, in cream tones, with a centrally placed illustration and classic lettering. It references the aesthetics of old editions, inspiring trust and sentiment.`
+      },
+      {
+        id: "04",
+        title: "Ona i On w słowach",
+        author: "Ewa Dziubanii-Pniewska",
+        category: "Poems",
+        coverSrc: "https://storage.googleapis.com/ekreacje-assets/Ona_i_On_w_s%C5%82owach_ok%C5%82adka.jpeg",
+        spreads: [
+          {
+            leftSrc: "https://storage.googleapis.com/ekreacje-assets/Ona_i_On_w_s%C5%82owach_1.jpg",
+            rightSrc: "https://storage.googleapis.com/ekreacje-assets/Ona_i_On_w_s%C5%82owach_2.jpg",
+          },
+          {
+            leftSrc: "https://storage.googleapis.com/ekreacje-assets/Ona_i_On_w_s%C5%82owach_3.jpg",
+            rightSrc: "https://storage.googleapis.com/ekreacje-assets/Ona_i_On_w_s%C5%82owach_4.jpg",
+          },
+          {
+            leftSrc: "https://storage.googleapis.com/ekreacje-assets/Ona_i_On_w_s%C5%82owach_5.jpg",
+            rightSrc: "https://storage.googleapis.com/ekreacje-assets/Ona_i_On_w_s%C5%82owach_6.jpg",
+          },
+          {
+            leftSrc: "https://storage.googleapis.com/ekreacje-assets/Ona_i_On_w_s%C5%82owach_7.jpg",
+            rightSrc: "https://storage.googleapis.com/ekreacje-assets/Ona_i_On_w_s%C5%82owach_8.jpg",
+          }
+        ],
+        designNotes: `I wanted to create a setting that would be a discreet background for poetry – a clean, subtle edition with enough "breath" to allow each poem to resonate. I focused on minimalism, where the space on the page and careful typography build an intimate atmosphere, encouraging quiet reading.
+The biggest design challenge was to create a layout that was almost "invisible", one that would not dominate the content. I wanted the reader to find room for their own emotions.
+To emphasize the personal character of the volume, I introduced several solutions:
+Space for the word: Each poem received a separate page with wide margins. I used a large amount of "light" and thoughtful leading, giving up on overcrowding the pages in favor of a clean, transparent composition.
+Typography: As a base, I chose the classic, elegant serif typeface Cormorant. I highlighted details with the calligraphic script Bickham Script Pro 3, which adds a personal touch to the whole.
+Subtle detail: I introduced vertical folios (page numbers) with low color saturation. They constitute a delicate detail that organizes the book's structure without distracting attention during reading.
+Color scheme: I distinguished the three parts into which the author divided the volume with colors taken directly from the image on the cover. Thanks to this, the entire publication gained color consistency.
+I based the cover design on a painting I received from the author. I wanted to combine classic with modern, so I decided on a clear division of the plane and very sparse typography on a white background. This solution allowed the painting to be fully exposed and gave the publication an elegant yet light character.`
       },
     ];
   }
@@ -171,6 +213,39 @@ Typografia: Jako bazę wybrałam czytelny, klasyczny krój szeryfowy. Dla kontra
 Inicjały: Zastosowanie dużych, ozdobnych inicjałów na początku rozdziałów służy jako wizualny drogowskaz i dekoracja.
 Okładkę zaprojektowałam w duchu retro, w kremowej tonacji, z centralnie umieszczoną ilustracją i klasycznym liternictwem. Nawiązuje do estetyki dawnych wydań, budząc zaufanie i sentyment.`
     },
+    {
+      id: "04",
+      title: "Ona i On w słowach",
+      author: "Ewa Dziubanii-Pniewska",
+      category: "Wiersze",
+      coverSrc: "https://storage.googleapis.com/ekreacje-assets/Ona_i_On_w_s%C5%82owach_ok%C5%82adka.jpeg",
+      spreads: [
+        {
+          leftSrc: "https://storage.googleapis.com/ekreacje-assets/Ona_i_On_w_s%C5%82owach_1.jpg",
+          rightSrc: "https://storage.googleapis.com/ekreacje-assets/Ona_i_On_w_s%C5%82owach_2.jpg",
+        },
+        {
+          leftSrc: "https://storage.googleapis.com/ekreacje-assets/Ona_i_On_w_s%C5%82owach_3.jpg",
+          rightSrc: "https://storage.googleapis.com/ekreacje-assets/Ona_i_On_w_s%C5%82owach_4.jpg",
+        },
+        {
+          leftSrc: "https://storage.googleapis.com/ekreacje-assets/Ona_i_On_w_s%C5%82owach_5.jpg",
+          rightSrc: "https://storage.googleapis.com/ekreacje-assets/Ona_i_On_w_s%C5%82owach_6.jpg",
+        },
+        {
+          leftSrc: "https://storage.googleapis.com/ekreacje-assets/Ona_i_On_w_s%C5%82owach_7.jpg",
+          rightSrc: "https://storage.googleapis.com/ekreacje-assets/Ona_i_On_w_s%C5%82owach_8.jpg",
+        }
+      ],
+      designNotes: `Chciałam stworzyć oprawę, która byłaby dyskretnym tłem dla poezji – edycję czystą, subtelną i na tyle pełną „oddechu”, by pozwalała każdemu wierszowi wybrzmieć. Postawiłam na minimalizm, w którym to przestrzeń na stronie i staranna typografia budują intymny klimat, zachęcając do spokojnej lektury.
+Największym wyzwaniem projektowym było stworzenie układu niemal „niewidocznego”, który nie dominowałby nad treścią. Zależało mi aby czytelnik znalazł miejsce na własne emocje. 
+Aby podkreślić osobisty charakter tomiku, wprowadziłam kilka rozwiązań:
+Przestrzeń dla słowa: Każdy wiersz otrzymał oddzielną stronę z szerokimi marginesami. Zastosowałam dużą ilość „światła” oraz przemyślaną interlinię, rezygnując z przeładowania stron na rzecz czystej, przejrzystej kompozycji.
+Typografia: Jako bazę wybrałam klasyczny, elegancki krój szeryfowy Cormorant. Detale wyróżniłam pismem kaligraficznym Bickham Script Pro 3, który dodaje całości osobistego charakteru.
+Subtelny detal: Wprowadziłam pionowe paginy o niskim nasyceniu koloru. Stanowią one delikatny detal, który porządkuje strukturę książki, nie rozpraszając uwagi podczas lektury.
+Kolorystyka: Trzy części, na które autorka podzieliła tomik, wyróżniłam barwami zaczerpniętymi bezpośrednio z obrazu na okładce. Dzięki temu cała publikacja zyskała spójność barwną.
+Projekt okładki oparłam na obrazie, który otrzymałam od autorki. Zależało mi na połączeniu klasyki z nowoczesnością, dlatego zdecydowałam się na wyraźny podział płaszczyzny i bardzo oszczędną typografię na białym tle. Takie rozwiązanie pozwoliło w pełni wyeksponować malarstwo i nadać publikacji elegancki, a zarazem lekki charakter.`
+    },
   ];
 };
 
@@ -178,23 +253,22 @@ Okładkę zaprojektowałam w duchu retro, w kremowej tonacji, z centralnie umies
 
 export type ProjectCategory = 
   | "Wszystkie"
-  | "Fantasy"
-  | "Powieść"
-  | "Wiersze"
-  | "Poems"
-  | "Novel"
+  | "Książki"
+  | "Okładki"
+  | "Produkty cyfrowe"
   | "All"
-  | "Inne"
-  | "Other";
+  | "Books"
+  | "Covers"
+  | "Digital products";
 
 export const getProjectCategories = (lang: 'pl' | 'en'): { main: ProjectCategory[] } => {
   if (lang === 'en') {
     return {
-      main: ["All", "Fantasy", "Novel", "Poems", "Other"]
+      main: ["All", "Books", "Covers", "Digital products"]
     };
   }
   return {
-    main: ["Wszystkie", "Fantasy", "Powieść", "Wiersze", "Inne"]
+    main: ["Wszystkie", "Książki", "Okładki", "Produkty cyfrowe"]
   };
 };
 
@@ -215,7 +289,7 @@ export const getAllProjectsData = (lang: 'pl' | 'en'): AllProjectItem[] => {
     {
       id: "ap-01",
       title: "Gruba Tańczy",
-      category: isEn ? "Poems" : "Wiersze",
+      category: isEn ? "Books" : "Książki",
       images: [
         "https://storage.googleapis.com/ekreacje-assets/mockup_gruba_1.jpg",
         "https://storage.googleapis.com/ekreacje-assets/mockup_gruba_2.jpg",
@@ -228,7 +302,7 @@ export const getAllProjectsData = (lang: 'pl' | 'en'): AllProjectItem[] => {
     {
       id: "ap-02",
       title: isEn ? "Fairy Tales" : "Baśnie",
-      category: "Fantasy",
+      category: isEn ? "Books" : "Książki",
       images: [
         "https://storage.googleapis.com/ekreacje-assets/mockup_basnie_1.png",
         "https://storage.googleapis.com/ekreacje-assets/mockup_basnie_2.jpg",
@@ -242,7 +316,7 @@ export const getAllProjectsData = (lang: 'pl' | 'en'): AllProjectItem[] => {
     {
       id: "ap-03",
       title: isEn ? "Doctor Dolittle" : "Doktor Dolittle i jego zwierzęta",
-      category: isEn ? "Novel" : "Powieść",
+      category: isEn ? "Books" : "Książki",
       images: [
         "https://storage.googleapis.com/ekreacje-assets/mockup_dolittle_1.jpg",
         "https://storage.googleapis.com/ekreacje-assets/mockup_dolittle_2.jpg",
@@ -253,7 +327,7 @@ export const getAllProjectsData = (lang: 'pl' | 'en'): AllProjectItem[] => {
     {
       id: "ap-04",
       title: isEn ? "Unfiltered" : "Bez filtra",
-      category: isEn ? "Other" : "Inne",
+      category: isEn ? "Covers" : "Okładki",
       images: [
         "https://storage.googleapis.com/ekreacje-assets/mockup_bez_1.png"
       ]
@@ -261,7 +335,7 @@ export const getAllProjectsData = (lang: 'pl' | 'en'): AllProjectItem[] => {
     {
       id: "ap-05",
       title: isEn ? "The Core Elements" : "Kluczowe elementy",
-      category: isEn ? "Other" : "Inne",
+      category: isEn ? "Covers" : "Okładki",
       images: [
         "https://storage.googleapis.com/ekreacje-assets/mockup_kluczowe_1.png",
       ]
@@ -269,7 +343,7 @@ export const getAllProjectsData = (lang: 'pl' | 'en'): AllProjectItem[] => {
     {
       id: "ap-06",
       title: isEn ? "The Scent Collector" : "Kolekcjonerka zapachów",
-      category: isEn ? "Novel" : "Powieść",
+      category: isEn ? "Covers" : "Okładki",
       images: [
         "https://storage.googleapis.com/ekreacje-assets/mockup_kolekcjonerka_1.jpg",
         "https://storage.googleapis.com/ekreacje-assets/mockup_kolekcjonerka_2.png",
@@ -279,7 +353,7 @@ export const getAllProjectsData = (lang: 'pl' | 'en'): AllProjectItem[] => {
     {
       id: "ap-07",
       title: isEn ? "The Company Secrets: Vol. I" : "Sekrety spółki: I",
-      category: isEn ? "Other" : "Inne",
+      category: isEn ? "Covers" : "Okładki",
       images: [
         "https://storage.googleapis.com/ekreacje-assets/mockup_sekrety_1.jpg"
       ]
@@ -287,7 +361,7 @@ export const getAllProjectsData = (lang: 'pl' | 'en'): AllProjectItem[] => {
     {
       id: "ap-08",
       title: isEn ? "The Entangled Mind" : "Splatana myśl",
-      category: isEn ? "Other" : "Inne",
+      category: isEn ? "Covers" : "Okładki",
       images: [
         "https://storage.googleapis.com/ekreacje-assets/mockup_splatana_1.png"
       ]
@@ -295,7 +369,7 @@ export const getAllProjectsData = (lang: 'pl' | 'en'): AllProjectItem[] => {
     {
       id: "ap-09",
       title: isEn ? "The Art of Sketching" : "Sztuka szkicowania",
-      category: isEn ? "Other" : "Inne",
+      category: isEn ? "Covers" : "Okładki",
       images: [
         "https://storage.googleapis.com/ekreacje-assets/mockup_sztuka_1.jpg"
       ]
@@ -303,7 +377,7 @@ export const getAllProjectsData = (lang: 'pl' | 'en'): AllProjectItem[] => {
     {
       id: "ap-10",
       title: isEn ? "Seen on Your Own Terms" : "Widoczna po swojemu",
-      category: isEn ? "Other" : "Inne",
+      category: isEn ? "Covers" : "Okładki",
       images: [
         "https://storage.googleapis.com/ekreacje-assets/mockup_widoczna_1.png"
       ]
@@ -311,7 +385,7 @@ export const getAllProjectsData = (lang: 'pl' | 'en'): AllProjectItem[] => {
     {
       id: "ap-11",
       title: isEn ? "Whats Your Brands Visual Identity?" : "Jaki jest wizualny typ twojej marki?",
-      category: isEn ? "Other" : "Inne",
+      category: isEn ? "Covers" : "Okładki",
       images: [
         "https://storage.googleapis.com/ekreacje-assets/mockup_wizualny_1.png"
       ]
@@ -319,7 +393,7 @@ export const getAllProjectsData = (lang: 'pl' | 'en'): AllProjectItem[] => {
     {
       id: "ap-12",
       title: isEn ? "From Burnout to Breakthrough" : "Od wypalenia do działania",
-      category: isEn ? "Other" : "Inne",
+      category: isEn ? "Covers" : "Okładki",
       images: [
         "https://storage.googleapis.com/ekreacje-assets/mockup_wypalenia_1.png"
       ]
@@ -327,9 +401,107 @@ export const getAllProjectsData = (lang: 'pl' | 'en'): AllProjectItem[] => {
     {
       id: "ap-13",
       title: isEn ? "A Sensory Journey" : "Podróż dla zmysłów",
-      category: isEn ? "Other" : "Inne",
+      category: isEn ? "Digital products" : "Produkty cyfrowe",
       images: [
         "https://storage.googleapis.com/ekreacje-assets/mockup_zmyslow_1.1.jpg"
+      ]
+    },
+    {
+      id: "ap-14",
+      title: isEn ? "She and He in Words" : "Ona i On w słowach",
+      category: isEn ? "Books" : "Książki",
+      images: [
+        "https://storage.googleapis.com/ekreacje-assets/Ona_i_On_w_s%C5%82owach_mockup2.jpg",
+        "https://storage.googleapis.com/ekreacje-assets/Ona_i_On_w_s%C5%82owach_mockup3.jpg",
+        "https://storage.googleapis.com/ekreacje-assets/Ona_i_On_w_s%C5%82owach_mockup4.jpg"
+      ]
+    },
+    {
+      id: "ap-15",
+      title: isEn ? "The Snow Queen (ePUB)" : "Królowa Śniegu (ePUB)",
+      category: isEn ? "Digital products" : "Produkty cyfrowe",
+      images: [
+        "https://storage.googleapis.com/ekreacje-assets/Kr%C3%B3lowa_%C5%9Aniegu_mockup_ePUB1.jpg"
+      ]
+    },
+    {
+      id: "ap-16",
+      title: isEn ? "She and He in Words (ePUB)" : "Ona i On w słowach (ePUB)",
+      category: isEn ? "Digital products" : "Produkty cyfrowe",
+      images: [
+        "https://storage.googleapis.com/ekreacje-assets/Ona_i_On_w_s%C5%82owach_mockup_ePUB.jpg"
+      ]
+    },
+    {
+      id: "ap-17",
+      title: isEn ? "Understanding GDPR Consents" : "Zrozumieć zgody RODO",
+      category: isEn ? "Digital products" : "Produkty cyfrowe",
+      images: [
+        "https://storage.googleapis.com/ekreacje-assets/Mockup_ePDF1.jpg"
+      ]
+    },
+    {
+      id: "ap-18",
+      title: isEn ? "Company Secrets Part: I" : "Sekrety spółki część: I",
+      category: isEn ? "Digital products" : "Produkty cyfrowe",
+      images: [
+        "https://storage.googleapis.com/ekreacje-assets/Mockup_ePDF2.jpg"
+      ]
+    },
+    {
+      id: "ap-19",
+      title: isEn ? "GDPR for Parents" : "RODO dla rodziców",
+      category: isEn ? "Digital products" : "Produkty cyfrowe",
+      images: [
+        "https://storage.googleapis.com/ekreacje-assets/Mockup_ePDF3.jpg"
+      ]
+    },
+    {
+      id: "ap-20",
+      title: isEn ? "3 Strong Ideas for Success" : "3 mocne pomysły na sukces",
+      category: isEn ? "Digital products" : "Produkty cyfrowe",
+      images: [
+        "https://storage.googleapis.com/ekreacje-assets/Mockup_ePDF4.jpg"
+      ]
+    },
+    {
+      id: "ap-21",
+      title: isEn ? "Caught in the First Emotion" : "Zatrzymani w pierwszym uczuciu",
+      category: isEn ? "Digital products" : "Produkty cyfrowe",
+      images: [
+        "https://storage.googleapis.com/ekreacje-assets/Mockup_ePDF5.jpg"
+      ]
+    },
+    {
+      id: "ap-22",
+      title: isEn ? "Developmental Questions" : "Pytajki rozwojowe",
+      category: isEn ? "Digital products" : "Produkty cyfrowe",
+      images: [
+        "https://storage.googleapis.com/ekreacje-assets/Mockup_ePDF6.jpg"
+      ]
+    },
+    {
+      id: "ap-23",
+      title: isEn ? "On the Verge of Burnout" : "Na skraju wypalenia zawodowego",
+      category: isEn ? "Digital products" : "Produkty cyfrowe",
+      images: [
+        "https://storage.googleapis.com/ekreacje-assets/Mockup_ePDF7.jpg"
+      ]
+    },
+    {
+      id: "ap-24",
+      title: isEn ? "Cook Up a Career" : "Ugotuj karierę",
+      category: isEn ? "Digital products" : "Produkty cyfrowe",
+      images: [
+        "https://storage.googleapis.com/ekreacje-assets/Mockup_ePDF8.jpg"
+      ]
+    },
+    {
+      id: "ap-25",
+      title: isEn ? "Stuck in a Dead End. What's Next?" : "Utknęłam w martwym punkcie. Co dalej?",
+      category: isEn ? "Digital products" : "Produkty cyfrowe",
+      images: [
+        "https://storage.googleapis.com/ekreacje-assets/Mockup_ePDF9.jpg"
       ]
     }
   ];
