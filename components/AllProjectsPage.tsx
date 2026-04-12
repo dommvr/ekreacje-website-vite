@@ -31,7 +31,6 @@ const AllProjectsPage = () => {
 
   // Filter Data
   const filteredProjects = ALL_PROJECTS_DATA.filter(project => {
-    if (activeCategory === "Wszystkie" || activeCategory === "All") return true;
     return project.category === activeCategory;
   });
 
@@ -150,6 +149,11 @@ const AllProjectsPage = () => {
                     <h3 className="font-serif text-xl text-primary group-hover:text-accent transition-colors">
                       {project.title}
                     </h3>
+                    {project.author && (
+                      <p className="text-sm text-secondary">
+                        {project.author}
+                      </p>
+                    )}
                     <p className="text-xs font-bold uppercase tracking-widest text-muted/60">
                       {project.category}
                     </p>
@@ -182,6 +186,9 @@ const AllProjectsPage = () => {
             <div className="flex justify-between items-center p-6 text-white w-full z-10">
               <div className="text-left">
                 <h2 className="font-serif text-2xl font-bold">{selectedProject.title}</h2>
+                {selectedProject.author && (
+                  <p className="text-sm text-white/80 mb-1">{selectedProject.author}</p>
+                )}
                 <p className="text-xs opacity-70 uppercase tracking-widest">{selectedProject.category}</p>
               </div>
               <button 

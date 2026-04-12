@@ -252,11 +252,9 @@ Projekt okładki oparłam na obrazie, który otrzymałam od autorki. Zależało 
 // --- ALL PROJECTS PAGE DATA (Grid View) ---
 
 export type ProjectCategory = 
-  | "Wszystkie"
   | "Książki"
   | "Okładki"
   | "Produkty cyfrowe"
-  | "All"
   | "Books"
   | "Covers"
   | "Digital products";
@@ -264,17 +262,18 @@ export type ProjectCategory =
 export const getProjectCategories = (lang: 'pl' | 'en'): { main: ProjectCategory[] } => {
   if (lang === 'en') {
     return {
-      main: ["All", "Books", "Covers", "Digital products"]
+      main: ["Books", "Covers", "Digital products"]
     };
   }
   return {
-    main: ["Wszystkie", "Książki", "Okładki", "Produkty cyfrowe"]
+    main: ["Książki", "Okładki", "Produkty cyfrowe"]
   };
 };
 
 export interface AllProjectItem {
   id: string;
   title: string;
+  author?: string;
   category: ProjectCategory;
   images: string[]; 
 }
@@ -310,7 +309,8 @@ export const getAllProjectsData = (lang: 'pl' | 'en'): AllProjectItem[] => {
         "https://storage.googleapis.com/ekreacje-assets/mockup_basnie_4.jpg",
         "https://storage.googleapis.com/ekreacje-assets/mockup_basnie_5.1.jpg",
         "https://storage.googleapis.com/ekreacje-assets/mockup_basnie_6.png",
-        "https://storage.googleapis.com/ekreacje-assets/mockup_basnie_7.png"
+        "https://storage.googleapis.com/ekreacje-assets/mockup_basnie_7.png",
+        "https://storage.googleapis.com/ekreacje-assets/Kr%C3%B3lowa_%C5%9Aniegu_mockup_ePUB1.jpg"
       ]
     },
     {
@@ -351,16 +351,8 @@ export const getAllProjectsData = (lang: 'pl' | 'en'): AllProjectItem[] => {
       ]
     },
     {
-      id: "ap-07",
-      title: isEn ? "The Company Secrets: Vol. I" : "Sekrety spółki: I",
-      category: isEn ? "Covers" : "Okładki",
-      images: [
-        "https://storage.googleapis.com/ekreacje-assets/mockup_sekrety_1.jpg"
-      ]
-    },
-    {
       id: "ap-08",
-      title: isEn ? "The Entangled Mind" : "Splatana myśl",
+      title: isEn ? "Entangled Thoughts" : "Splątane myśli",
       category: isEn ? "Covers" : "Okładki",
       images: [
         "https://storage.googleapis.com/ekreacje-assets/mockup_splatana_1.png"
@@ -399,50 +391,38 @@ export const getAllProjectsData = (lang: 'pl' | 'en'): AllProjectItem[] => {
       ]
     },
     {
-      id: "ap-13",
-      title: isEn ? "A Sensory Journey" : "Podróż dla zmysłów",
-      category: isEn ? "Digital products" : "Produkty cyfrowe",
-      images: [
-        "https://storage.googleapis.com/ekreacje-assets/mockup_zmyslow_1.1.jpg"
-      ]
-    },
-    {
       id: "ap-14",
       title: isEn ? "She and He in Words" : "Ona i On w słowach",
       category: isEn ? "Books" : "Książki",
       images: [
         "https://storage.googleapis.com/ekreacje-assets/Ona_i_On_w_s%C5%82owach_mockup2.jpg",
         "https://storage.googleapis.com/ekreacje-assets/Ona_i_On_w_s%C5%82owach_mockup3.jpg",
-        "https://storage.googleapis.com/ekreacje-assets/Ona_i_On_w_s%C5%82owach_mockup4.jpg"
-      ]
-    },
-    {
-      id: "ap-15",
-      title: isEn ? "The Snow Queen (ePUB)" : "Królowa Śniegu (ePUB)",
-      category: isEn ? "Digital products" : "Produkty cyfrowe",
-      images: [
-        "https://storage.googleapis.com/ekreacje-assets/Kr%C3%B3lowa_%C5%9Aniegu_mockup_ePUB1.jpg"
-      ]
-    },
-    {
-      id: "ap-16",
-      title: isEn ? "She and He in Words (ePUB)" : "Ona i On w słowach (ePUB)",
-      category: isEn ? "Digital products" : "Produkty cyfrowe",
-      images: [
+        "https://storage.googleapis.com/ekreacje-assets/Ona_i_On_w_s%C5%82owach_mockup4.jpg",
         "https://storage.googleapis.com/ekreacje-assets/Ona_i_On_w_s%C5%82owach_mockup_ePUB.jpg"
       ]
     },
     {
-      id: "ap-17",
+      id: "ap-15",
       title: isEn ? "Understanding GDPR Consents" : "Zrozumieć zgody RODO",
+      author: "Aleksandra Adamska",
       category: isEn ? "Digital products" : "Produkty cyfrowe",
       images: [
         "https://storage.googleapis.com/ekreacje-assets/Mockup_ePDF1.jpg"
       ]
     },
     {
-      id: "ap-18",
-      title: isEn ? "Company Secrets Part: I" : "Sekrety spółki część: I",
+      id: "ap-17",
+      title: isEn ? "GDPR for Parents" : "RODO dla rodziców",
+      author: "Aleksandra Adamska",
+      category: isEn ? "Digital products" : "Produkty cyfrowe",
+      images: [
+        "https://storage.googleapis.com/ekreacje-assets/Mockup_ePDF3.jpg"
+      ]
+    },
+    {
+      id: "ap-16",
+      title: isEn ? "Company Secrets. Part I" : "Sekrety spółki. Część I",
+      author: "Aneta Ruszkowska",
       category: isEn ? "Digital products" : "Produkty cyfrowe",
       images: [
         "https://storage.googleapis.com/ekreacje-assets/Mockup_ePDF2.jpg"
@@ -450,58 +430,65 @@ export const getAllProjectsData = (lang: 'pl' | 'en'): AllProjectItem[] => {
     },
     {
       id: "ap-19",
-      title: isEn ? "GDPR for Parents" : "RODO dla rodziców",
-      category: isEn ? "Digital products" : "Produkty cyfrowe",
-      images: [
-        "https://storage.googleapis.com/ekreacje-assets/Mockup_ePDF3.jpg"
-      ]
-    },
-    {
-      id: "ap-20",
-      title: isEn ? "3 Strong Ideas for Success" : "3 mocne pomysły na sukces",
-      category: isEn ? "Digital products" : "Produkty cyfrowe",
-      images: [
-        "https://storage.googleapis.com/ekreacje-assets/Mockup_ePDF4.jpg"
-      ]
-    },
-    {
-      id: "ap-21",
       title: isEn ? "Caught in the First Emotion" : "Zatrzymani w pierwszym uczuciu",
+      author: "Aneta Treder",
       category: isEn ? "Digital products" : "Produkty cyfrowe",
       images: [
         "https://storage.googleapis.com/ekreacje-assets/Mockup_ePDF5.jpg"
       ]
     },
     {
-      id: "ap-22",
-      title: isEn ? "Developmental Questions" : "Pytajki rozwojowe",
-      category: isEn ? "Digital products" : "Produkty cyfrowe",
-      images: [
-        "https://storage.googleapis.com/ekreacje-assets/Mockup_ePDF6.jpg"
-      ]
-    },
-    {
-      id: "ap-23",
+      id: "ap-21",
       title: isEn ? "On the Verge of Burnout" : "Na skraju wypalenia zawodowego",
+      author: "Justyna Federowicz",
       category: isEn ? "Digital products" : "Produkty cyfrowe",
       images: [
         "https://storage.googleapis.com/ekreacje-assets/Mockup_ePDF7.jpg"
       ]
     },
     {
-      id: "ap-24",
-      title: isEn ? "Cook Up a Career" : "Ugotuj karierę",
+      id: "ap-23",
+      title: isEn ? "Stuck in a Dead End. What's Next?" : "Utknęłam w martwym punkcie. Co dalej?",
+      author: "Justyna Federowicz",
+      category: isEn ? "Digital products" : "Produkty cyfrowe",
+      images: [
+        "https://storage.googleapis.com/ekreacje-assets/Mockup_ePDF9.jpg"
+      ]
+    },
+    {
+      id: "ap-22",
+      title: isEn ? "Design a Career on Your Own Terms" : "Zaprojektuj karierę na własnych zasadach",
+      author: "Justyna Federowicz",
       category: isEn ? "Digital products" : "Produkty cyfrowe",
       images: [
         "https://storage.googleapis.com/ekreacje-assets/Mockup_ePDF8.jpg"
       ]
     },
     {
-      id: "ap-25",
-      title: isEn ? "Stuck in a Dead End. What's Next?" : "Utknęłam w martwym punkcie. Co dalej?",
+      id: "ap-18",
+      title: isEn ? "3 Strong Ideas for Success" : "3 mocne pomysły na sukces",
+      author: "Kamil Fiszer",
       category: isEn ? "Digital products" : "Produkty cyfrowe",
       images: [
-        "https://storage.googleapis.com/ekreacje-assets/Mockup_ePDF9.jpg"
+        "https://storage.googleapis.com/ekreacje-assets/Mockup_ePDF4.jpg"
+      ]
+    },
+    {
+      id: "ap-13",
+      title: isEn ? "Andalusia - A Sensory Journey" : "Andaluzja - podróż dla zmysłów",
+      author: isEn ? "Own work" : "Praca własna",
+      category: isEn ? "Digital products" : "Produkty cyfrowe",
+      images: [
+        "https://storage.googleapis.com/ekreacje-assets/mockup_zmyslow_1.1.jpg"
+      ]
+    },
+    {
+      id: "ap-20",
+      title: isEn ? "Developmental Questions" : "Pytajki rozwojowe",
+      author: isEn ? "Collective work" : "Praca zbiorowa",
+      category: isEn ? "Digital products" : "Produkty cyfrowe",
+      images: [
+        "https://storage.googleapis.com/ekreacje-assets/Mockup_ePDF6.jpg"
       ]
     }
   ];

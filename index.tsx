@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { createRoot } from 'react-dom/client';
+import { Analytics } from '@vercel/analytics/react';
 import Home from './app/page';
 import KalkulatorPage from './app/kalkulator/page';
 import AllProjectsPage from './components/AllProjectsPage';
@@ -121,6 +122,7 @@ if (container) {
     <React.StrictMode>
       <LanguageProvider>
         <MainApp />
+        <Analytics />
       </LanguageProvider>
     </React.StrictMode>
   );
