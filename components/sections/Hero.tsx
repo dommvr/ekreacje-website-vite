@@ -7,7 +7,7 @@ const Hero = () => {
   const { t } = useLanguage();
   return (
     <Section id="main" className="pb-20">
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-start">
         {/* Left: Text Content */}
         <div className="space-y-8">
           <h1 className="font-serif text-5xl md:text-6xl lg:text-7xl font-bold leading-tight text-primary text-balance">

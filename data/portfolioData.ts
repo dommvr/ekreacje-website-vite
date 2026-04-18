@@ -318,8 +318,8 @@ export const getAllProjectsData = (lang: 'pl' | 'en'): AllProjectItem[] => {
       title: isEn ? "Doctor Dolittle" : "Doktor Dolittle i jego zwierzęta",
       category: isEn ? "Books" : "Książki",
       images: [
-        "https://storage.googleapis.com/ekreacje-assets/mockup_dolittle_1.jpg",
         "https://storage.googleapis.com/ekreacje-assets/mockup_dolittle_2.jpg",
+        "https://storage.googleapis.com/ekreacje-assets/mockup_dolittle_1.jpg",
         "https://storage.googleapis.com/ekreacje-assets/mockup_dolittle_3.jpg",
         "https://storage.googleapis.com/ekreacje-assets/mockup_dolittle_4.1.jpg"
       ]

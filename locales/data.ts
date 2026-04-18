@@ -134,7 +134,7 @@ export const pl: Dictionary = {
     contact: "Kontakt i wycena"
   },
   hero: {
-    title: "Zaprojektuję Twoją książkę – od okładki po profesjonalny skład tekstu",
+    title: "Zaprojektuję Twoją książkę, od okładki po skład tekstu",
     subtitle: "Piszesz porywający kryminał, nastrojową poezję czy epickie powieści? Zadbam o to, by forma Twojej książki dorównała jakości treści.",
     desc1: "Oferuję kompleksowe projektowanie okładek oraz precyzyjny skład i łamanie tekstu. Od dopracowanej typografii po techniczne przygotowanie do druku – biorę na siebie cały proces wizualny. Tworzę estetyczne, czytelne układy, które budują autorytet autora i komfort czytelnika.",
     desc2: "Działajmy konkretnie i bez zbędnego dystansu. Sprawdźmy, czy pasujemy do siebie projektowo.",
@@ -283,7 +283,7 @@ export const en: Dictionary = {
     contact: "Contact & Quote"
   },
   hero: {
-    title: "I will design your book – from the cover to professional text typesetting",
+    title: "I will design your book, from the cover to text typesetting",
     subtitle: "Writing a gripping thriller, atmospheric poetry, or epic novels? I'll ensure your book's form matches the quality of its content.",
     desc1: "I offer comprehensive cover design and precise text typesetting. From refined typography to technical print preparation – I handle the entire visual process. I create aesthetic, readable layouts that build author authority and reader comfort.",
     desc2: "Let's act specifically and without unnecessary distance. Let's check if we are a good design match.",
