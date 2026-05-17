@@ -28,10 +28,10 @@ const Navbar = ({ currentHash = '' }: { currentHash?: string }) => {
     { name: t.nav.target, id: 'dla-kogo', href: '#dla-kogo' },
     { 
       name: t.nav.portfolio, 
-      id: 'portfolio', 
-      href: '#portfolio',
+      id: 'wybrane-realizacje', 
+      href: '#wybrane-realizacje',
       subItems: [
-        { name: t.nav.selectedWorks, href: '#portfolio' },
+        { name: t.nav.selectedWorks, href: '#wybrane-realizacje' },
         { name: t.nav.allProjects, href: '#/wszystkie-projekty' }
       ]
     },
@@ -92,8 +92,8 @@ const Navbar = ({ currentHash = '' }: { currentHash?: string }) => {
       // Match based on scroll spy
       if (activeSection === item.id) return true;
       
-      // Fallback for Portfolio parent highlighting if we are on the #portfolio hash section
-      if (item.id === 'portfolio' && currentHash === '#portfolio') return true;
+      // Fallback for the selected works section when the hash contains a specific project.
+      if (item.id === 'wybrane-realizacje' && currentHash.startsWith('#wybrane-realizacje')) return true;
     }
 
     return false;
@@ -176,7 +176,7 @@ const Navbar = ({ currentHash = '' }: { currentHash?: string }) => {
                                  key={sub.name}
                                  href={sub.href}
                                  onClick={(e) => handleNavClick(e, sub.href)}
-                                 className={cn("px-6 py-4 text-sm font-bold uppercase tracking-widest transition-colors text-center whitespace-nowrap", currentHash === sub.href ? "bg-accent text-white" : "text-primary hover:bg-accent hover:text-white")}
+                                 className={cn("px-6 py-4 text-sm font-bold uppercase tracking-widest transition-colors text-center whitespace-nowrap", currentHash === sub.href || currentHash.startsWith(`${sub.href}=`) ? "bg-accent text-white" : "text-primary hover:bg-accent hover:text-white")}
                                >
                                  {sub.name}
                                </a>
@@ -220,7 +220,7 @@ const Navbar = ({ currentHash = '' }: { currentHash?: string }) => {
                           {expandedMobileItem === item.id && (
                             <motion.div initial={{ opacity: 0, height: 0 }} animate={{ opacity: 1, height: 'auto' }} exit={{ opacity: 0, height: 0 }} className="flex flex-col w-full bg-primary/5 space-y-2 py-2">
                                {item.subItems.map(sub => (
-                                 <a key={sub.name} href={sub.href} onClick={(e) => handleNavClick(e, sub.href)} className={cn("uppercase tracking-widest text-sm font-bold w-full text-center py-3 transition-colors", currentHash === sub.href ? "text-accent" : "text-secondary")}>
+                                 <a key={sub.name} href={sub.href} onClick={(e) => handleNavClick(e, sub.href)} className={cn("uppercase tracking-widest text-sm font-bold w-full text-center py-3 transition-colors", currentHash === sub.href || currentHash.startsWith(`${sub.href}=`) ? "text-accent" : "text-secondary")}>
                                    {sub.name}
                                  </a>
                                ))}

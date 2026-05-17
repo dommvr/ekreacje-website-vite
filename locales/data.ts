@@ -249,7 +249,7 @@ export const pl: Dictionary = {
       pdf_access: { label: 'Dostępny plik PDF', desc: 'Dostosowanie pliku do wymagań WCAG (cena orientacyjna dla standardowej publikacji).' },
     },
     total: "Suma szacunkowa",
-    disclaimer: "* Podane ceny są cenami netto. Ostateczna wycena może się różnić w zależności od specyfiki projektu."
+    disclaimer: "* Podane ceny są cenami brutto. Ostateczna wycena może się różnić w zależności od specyfiki projektu."
   },
   footer: {
     rights: "Wszelkie prawa zastrzeżone.",
@@ -398,7 +398,7 @@ export const en: Dictionary = {
       pdf_access: { label: 'Accessible PDF', desc: 'File adjustment to WCAG requirements (indicative price for standard publication).' },
     },
     total: "Estimated Total",
-    disclaimer: "* Prices are net. Final quote may vary depending on project specifics."
+    disclaimer: "* Prices are gross. Final quote may vary depending on project specifics."
   },
   footer: {
     rights: "All rights reserved.",

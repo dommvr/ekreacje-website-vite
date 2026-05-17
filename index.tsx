@@ -10,6 +10,7 @@ import Footer from './components/Footer';
 import CookieConsent from './components/CookieConsent';
 import { getLegalDocs } from './data/legalData';
 import { LanguageProvider, useLanguage } from './context/LanguageContext';
+import { normalizeHash, scrollToHashTarget } from './lib/utils';
 import './app/globals.css';
 
 const MainApp = () => {
@@ -25,13 +26,6 @@ const MainApp = () => {
   const legalSlug = currentHash.startsWith('#/') ? currentHash.replace('#/', '') : null;
   const activeLegalDoc = legalSlug && LEGAL_DOCS[legalSlug as keyof typeof LEGAL_DOCS] ? LEGAL_DOCS[legalSlug as keyof typeof LEGAL_DOCS] : null;
 
-  // Force scroll to top when switching between main page modes
-  useEffect(() => {
-    if (isKalkulator || isAllProjects || activeLegalDoc) {
-      window.scrollTo({ top: 0, behavior: 'auto' });
-    }
-  }, [isKalkulator, isAllProjects, activeLegalDoc]);
-
   useEffect(() => {
     const getPersistedPath = () => {
       try { return localStorage.getItem('ekreacje_last_path'); } catch (e) { return null; }
@@ -44,9 +38,9 @@ const MainApp = () => {
       
       let targetPath = '#home';
       if (urlHash && urlHash !== '#' && urlHash !== '') {
-        targetPath = urlHash;
+        targetPath = normalizeHash(urlHash);
       } else if (savedPath && savedPath.startsWith('#')) {
-        targetPath = savedPath;
+        targetPath = normalizeHash(savedPath);
       }
 
       setCurrentHash(targetPath);
@@ -58,42 +52,49 @@ const MainApp = () => {
           window.location.hash = 'home';
       }
 
-      // Initial Scroll Logic
-      if (targetPath && targetPath !== '#home' && !targetPath.startsWith('#/')) {
-         setTimeout(() => {
-            const id = targetPath.includes('=') ? targetPath.split('=')[0].replace('#', '') : targetPath.replace('#', '');
-            const element = document.getElementById(id);
-            if (element) {
-               element.scrollIntoView({ behavior: 'smooth' });
-            }
-         }, 300);
-      } else {
-         window.scrollTo({ top: 0, behavior: 'auto' });
-      }
     };
 
     initRoute();
 
     const handleHashChange = () => {
-      const newHash = window.location.hash || '#home';
+      const newHash = normalizeHash(window.location.hash || '#home');
       setCurrentHash(newHash);
       if (newHash) {
         try { localStorage.setItem('ekreacje_last_path', newHash); } catch (e) {}
-      }
-      if (newHash === '#home' || newHash === '' || newHash === '#') {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-      } else if (newHash && !newHash.startsWith('#/')) {
-        const id = newHash.includes('=') ? newHash.split('=')[0].replace('#', '') : newHash.replace('#', '');
-        const element = document.getElementById(id);
-        if (element) element.scrollIntoView({ behavior: 'smooth' });
-      } else if (newHash.startsWith('#/')) {
-        window.scrollTo({ top: 0, behavior: 'auto' });
       }
     };
 
     window.addEventListener('hashchange', handleHashChange);
     return () => window.removeEventListener('hashchange', handleHashChange);
   }, []);
+
+  useEffect(() => {
+    if (!currentHash) return;
+
+    if (currentHash === '#home' || currentHash === '' || currentHash === '#') {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      return;
+    }
+
+    if (currentHash.startsWith('#/')) {
+      window.scrollTo({ top: 0, behavior: 'auto' });
+      return;
+    }
+
+    let frameId = 0;
+    let nestedFrameId = 0;
+
+    frameId = window.requestAnimationFrame(() => {
+      nestedFrameId = window.requestAnimationFrame(() => {
+        scrollToHashTarget(currentHash, 'smooth');
+      });
+    });
+
+    return () => {
+      window.cancelAnimationFrame(frameId);
+      window.cancelAnimationFrame(nestedFrameId);
+    };
+  }, [currentHash]);
 
   return (
     <div className="font-sans bg-background text-primary antialiased paper-bg">

@@ -55,8 +55,8 @@ export default function KalkulatorPage() {
             </a>
             
             <a 
-              href="#portfolio"
-              onClick={(e) => { e.preventDefault(); navigateTo('#portfolio'); }}
+              href="#wybrane-realizacje"
+              onClick={(e) => { e.preventDefault(); navigateTo('#wybrane-realizacje'); }}
               className="inline-flex items-center justify-center gap-2 border border-primary text-primary px-8 py-4 uppercase tracking-widest font-bold hover:bg-primary hover:text-white transition-colors min-w-[240px] cursor-pointer"
             >
               {t.calculator.ctaPortfolio}

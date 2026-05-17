@@ -5,7 +5,7 @@ import Section from '../ui/Section';
 import { ChevronLeft, ChevronRight, X, BookOpen, ArrowLeft, ArrowRight, AlignLeft } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { getPortfolioData } from '@/data/portfolioData';
-import { cn } from '@/lib/utils';
+import { cn, navigateTo, normalizeHash } from '@/lib/utils';
 import { useLanguage } from '@/context/LanguageContext';
 import HTMLFlipBook from 'react-pageflip';
 
@@ -46,6 +46,8 @@ const Portfolio = () => {
   const [isFullNoteOpen, setIsFullNoteOpen] = useState(false);
   const [currentSpreadIndex, setCurrentSpreadIndex] = useState(0);
   const flipBookRef = useRef<any>(null);
+  const previewScrollPositionRef = useRef<number | null>(null);
+  const shouldRestorePreviewScrollRef = useRef(false);
 
   const currentBook = PORTFOLIO_DATA[currentIndex];
   const totalBooks = PORTFOLIO_DATA.length;
@@ -110,11 +112,13 @@ const Portfolio = () => {
     // When book changes, reset inner states
     setCurrentSpreadIndex(0);
     setIsFullNoteOpen(false);
+    previewScrollPositionRef.current = null;
+    shouldRestorePreviewScrollRef.current = false;
   }, [currentIndex]);
 
   useEffect(() => {
     const handleHashCheck = () => {
-      const hash = window.location.hash;
+      const hash = normalizeHash(window.location.hash);
       if (hash.startsWith('#wybrane-realizacje=')) {
         const id = hash.split('=')[1];
         const index = PORTFOLIO_DATA.findIndex(b => b.id === id);
@@ -133,9 +137,30 @@ const Portfolio = () => {
     return () => window.removeEventListener('hashchange', handleHashCheck);
   }, [PORTFOLIO_DATA]);
 
+  const clearSelectedProjectHash = () => {
+    if (typeof window === 'undefined') return;
+
+    const currentHash = normalizeHash(window.location.hash || '#home');
+    if (currentHash.startsWith('#wybrane-realizacje=')) {
+      navigateTo('#wybrane-realizacje');
+    }
+  };
+
+  const openFullNote = () => {
+    previewScrollPositionRef.current = window.scrollY;
+    shouldRestorePreviewScrollRef.current = false;
+    setIsFullNoteOpen(true);
+  };
+
+  const closeFullNote = () => {
+    shouldRestorePreviewScrollRef.current = previewScrollPositionRef.current !== null;
+    setIsFullNoteOpen(false);
+  };
+
   // --- CAROUSEL LOGIC ---
   const nextBook = () => {
     if (isReaderOpen) {
+      clearSelectedProjectHash();
       setIsReaderOpen(false);
       setIsFullNoteOpen(false);
       setTimeout(() => {
@@ -148,6 +173,7 @@ const Portfolio = () => {
 
   const prevBook = () => {
     if (isReaderOpen) {
+      clearSelectedProjectHash();
       setIsReaderOpen(false);
       setIsFullNoteOpen(false);
       setTimeout(() => {
@@ -165,6 +191,7 @@ const Portfolio = () => {
   };
 
   const closeReader = () => {
+    clearSelectedProjectHash();
     setIsReaderOpen(false);
     setIsFullNoteOpen(false);
   };
@@ -195,7 +222,7 @@ const Portfolio = () => {
       if (!isReaderOpen) return;
 
       if (e.key === 'Escape') {
-        if (isFullNoteOpen) setIsFullNoteOpen(false);
+        if (isFullNoteOpen) closeFullNote();
         else closeReader();
       }
       if (!isFullNoteOpen) {
@@ -208,9 +235,24 @@ const Portfolio = () => {
     return () => window.removeEventListener('keydown', handleKeyDown);
   }, [isReaderOpen, isFullNoteOpen]);
 
+  useEffect(() => {
+    if (!isFullNoteOpen && shouldRestorePreviewScrollRef.current && previewScrollPositionRef.current !== null) {
+      const restoreScrollTimeout = window.setTimeout(() => {
+        if (previewScrollPositionRef.current !== null) {
+          window.scrollTo({ top: previewScrollPositionRef.current, behavior: 'auto' });
+        }
+
+        shouldRestorePreviewScrollRef.current = false;
+        previewScrollPositionRef.current = null;
+      }, 450);
+
+      return () => window.clearTimeout(restoreScrollTimeout);
+    }
+  }, [isFullNoteOpen]);
+
 
   return (
-    <Section id="portfolio" className="flex flex-col gap-12 min-h-[800px]">
+    <Section id="wybrane-realizacje" className="flex flex-col gap-12 min-h-[800px]">
       
       {/* 1. HEADER AREA */}
       <div className="text-center max-w-3xl mx-auto space-y-6">
@@ -421,7 +463,7 @@ const Portfolio = () => {
                             {/* CTA: Read More */}
                             {isLongText && (
                               <button 
-                                onClick={() => setIsFullNoteOpen(true)}
+                                onClick={openFullNote}
                                 className="mt-4 inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-primary hover:text-accent border-b border-primary hover:border-accent pb-1 transition-all group"
                               >
                                 {t.portfolio.readMore}
@@ -451,7 +493,7 @@ const Portfolio = () => {
                       className="w-full max-w-4xl mx-auto bg-white border border-border shadow-2xl relative p-8 md:p-16 min-h-[500px] flex flex-col"
                     >
                       <button 
-                        onClick={() => setIsFullNoteOpen(false)}
+                        onClick={closeFullNote}
                         className="absolute top-6 right-6 p-2 text-primary hover:text-accent transition-colors flex items-center gap-2 group"
                       >
                         <span className="text-xs font-bold uppercase tracking-widest opacity-0 group-hover:opacity-100 transition-opacity">{t.portfolio.back}</span>
@@ -477,7 +519,7 @@ const Portfolio = () => {
 
                         <div className="pt-8 border-t border-border flex justify-between items-center">
                           <button 
-                             onClick={() => setIsFullNoteOpen(false)}
+                             onClick={closeFullNote}
                              className="text-sm font-bold uppercase tracking-widest text-muted hover:text-primary transition-colors flex items-center gap-2"
                           >
                             <ArrowLeft size={16} />

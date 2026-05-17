@@ -7,7 +7,7 @@ import {
 } from '@/data/portfolioData';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, ChevronLeft, ChevronRight, ZoomIn, BookOpen } from 'lucide-react';
-import { cn } from '@/lib/utils';
+import { cn, navigateTo } from '@/lib/utils';
 import { useLanguage } from '@/context/LanguageContext';
 
 const AllProjectsPage = () => {
@@ -253,8 +253,8 @@ const AllProjectsPage = () => {
                <div className="absolute bottom-6 left-0 right-0 flex justify-center z-30" onClick={(e) => e.stopPropagation()}>
                     <button 
                        onClick={() => {
-                         window.location.hash = `#wybrane-realizacje=${selectedProject.portfolioId}`;
                          closeProject();
+                         navigateTo(`#wybrane-realizacje=${selectedProject.portfolioId}`);
                        }}
                        className="px-6 py-3 bg-white text-primary hover:bg-white/90 rounded-full text-sm font-bold transition-transform hover:scale-105 tracking-widest uppercase shadow-lg shadow-black/20 flex items-center gap-2"
                     >
