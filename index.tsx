@@ -61,7 +61,7 @@ const MainApp = () => {
       // Initial Scroll Logic
       if (targetPath && targetPath !== '#home' && !targetPath.startsWith('#/')) {
          setTimeout(() => {
-            const id = targetPath.replace('#', '');
+            const id = targetPath.includes('=') ? targetPath.split('=')[0].replace('#', '') : targetPath.replace('#', '');
             const element = document.getElementById(id);
             if (element) {
                element.scrollIntoView({ behavior: 'smooth' });
@@ -83,7 +83,7 @@ const MainApp = () => {
       if (newHash === '#home' || newHash === '' || newHash === '#') {
         window.scrollTo({ top: 0, behavior: 'smooth' });
       } else if (newHash && !newHash.startsWith('#/')) {
-        const id = newHash.replace('#', '');
+        const id = newHash.includes('=') ? newHash.split('=')[0].replace('#', '') : newHash.replace('#', '');
         const element = document.getElementById(id);
         if (element) element.scrollIntoView({ behavior: 'smooth' });
       } else if (newHash.startsWith('#/')) {

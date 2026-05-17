@@ -6,7 +6,7 @@ import {
   ProjectCategory 
 } from '@/data/portfolioData';
 import { motion, AnimatePresence } from 'framer-motion';
-import { X, ChevronLeft, ChevronRight, ZoomIn } from 'lucide-react';
+import { X, ChevronLeft, ChevronRight, ZoomIn, BookOpen } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { useLanguage } from '@/context/LanguageContext';
 
@@ -197,9 +197,7 @@ const AllProjectsPage = () => {
               >
                 <X size={32} />
               </button>
-            </div>
-
-            {/* Main Content Area */}
+            </div>            {/* Main Content Area */}
             <div className="flex-1 flex items-center justify-center relative w-full h-full px-4 md:px-20 pb-20">
               
               {/* Left Arrow (only if multiple images) */}
@@ -248,9 +246,24 @@ const AllProjectsPage = () => {
                   </motion.div>
                 </AnimatePresence>
               </div>
-
             </div>
 
+            {/* Jump to Project Details Button */}
+            {selectedProject.portfolioId && (
+               <div className="absolute bottom-6 left-0 right-0 flex justify-center z-30" onClick={(e) => e.stopPropagation()}>
+                    <button 
+                       onClick={() => {
+                         window.location.hash = `#wybrane-realizacje=${selectedProject.portfolioId}`;
+                         closeProject();
+                       }}
+                       className="px-6 py-3 bg-white text-primary hover:bg-white/90 rounded-full text-sm font-bold transition-transform hover:scale-105 tracking-widest uppercase shadow-lg shadow-black/20 flex items-center gap-2"
+                    >
+                       <BookOpen size={18} />
+                       {lang === 'en' ? 'Show project details' : 'Pokaż szczegóły projektu'}
+                    </button>
+               </div>
+            )}
+            
           </motion.div>
         )}
       </AnimatePresence>
