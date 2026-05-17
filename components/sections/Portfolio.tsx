@@ -474,19 +474,30 @@ import HTMLFlipBook from 'react-pageflip';
 const WORD_LIMIT = 30; // Limit words for the small designer note window
 
 // Helper component for individual pages to work with react-pageflip
-const Page = React.forwardRef<HTMLDivElement, { children: React.ReactNode; className?: string }>((props, ref) => {
-  return (
-    <div className={cn("bg-[#fdfbf7] shadow-inner overflow-hidden", props.className)} ref={ref}>
-      <div className="w-full h-full relative">
-        {props.children}
-        {/* Subtle page texture/noise */}
-        <div className="absolute inset-0 pointer-events-none mix-blend-multiply opacity-[0.03] bg-noise" />
-      </div>
-    </div>
-  );
-});
+type PageProps = {
+  children: React.ReactNode;
+  className?: string;
+};
 
-Page.displayName = 'Page';
+const Page = React.forwardRef<HTMLDivElement, PageProps>(
+  ({ children, className }, ref) => {
+    return (
+      <div
+        className={cn("bg-[#fdfbf7] shadow-inner overflow-hidden", className)}
+        ref={ref}
+      >
+        <div className="w-full h-full relative">
+          {children}
+
+          {/* Subtle page texture/noise */}
+          <div className="absolute inset-0 pointer-events-none mix-blend-multiply opacity-[0.03] bg-noise" />
+        </div>
+      </div>
+    );
+  }
+);
+
+Page.displayName = "Page";
 
 const Portfolio = () => {
   const { lang, t } = useLanguage();
