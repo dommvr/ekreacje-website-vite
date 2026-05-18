@@ -271,7 +271,7 @@ const Portfolio = () => {
       <div className="relative flex-1 flex flex-col items-center w-full">
         
         {/* Navigation Arrows */}
-        <div className="absolute top-1/2 -translate-y-1/2 left-0 z-20">
+        <div className="hidden md:block absolute top-1/2 -translate-y-1/2 left-0 z-20">
           <button 
             onClick={prevBook}
             className="p-3 md:p-4 rounded-full bg-white/80 border border-primary/20 text-primary hover:bg-accent hover:text-white hover:border-accent transition-all shadow-lg backdrop-blur-sm group"
@@ -281,7 +281,7 @@ const Portfolio = () => {
           </button>
         </div>
         
-        <div className="absolute top-1/2 -translate-y-1/2 right-0 z-20">
+        <div className="hidden md:block absolute top-1/2 -translate-y-1/2 right-0 z-20">
           <button 
             onClick={nextBook}
             className="p-3 md:p-4 rounded-full bg-white/80 border border-primary/20 text-primary hover:bg-accent hover:text-white hover:border-accent transition-all shadow-lg backdrop-blur-sm group"
@@ -292,7 +292,7 @@ const Portfolio = () => {
         </div>
 
         {/* Content Container */}
-        <div className="w-full px-16 md:px-24 relative min-h-[600px] flex items-start justify-center">
+        <div className="w-full px-3 sm:px-6 md:px-16 lg:px-24 relative min-h-[600px] flex items-start justify-center">
           <AnimatePresence mode="wait">
             
             {!isReaderOpen ? (
@@ -433,7 +433,7 @@ const Portfolio = () => {
                         initial={{ opacity: 0, x: 20 }}
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ delay: 0.2 }}
-                        className="lg:col-span-1 bg-white border border-border p-8 h-full shadow-sm relative flex flex-col"
+                        className="w-full max-w-[420px] mx-auto lg:col-span-1 bg-white border border-border p-6 md:p-8 h-full shadow-sm relative flex flex-col"
                       >
                         <button 
                           onClick={closeReader}
