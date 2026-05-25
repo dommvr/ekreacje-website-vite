@@ -406,7 +406,7 @@ export const getAllProjectsData = (lang: 'pl' | 'en'): AllProjectItem[] => {
       images: [
         "https://storage.googleapis.com/ekreacje-assets/Ona_i_On_w_s%C5%82owach_mockup2.jpg",
         "https://storage.googleapis.com/ekreacje-assets/Ona_i_On_w_s%C5%82owach_mockup3.jpg",
-        "https://storage.googleapis.com/ekreacje-assets/Ona_i_On_w_s%C5%82owach_mockup4.jpg",
+        // "https://storage.googleapis.com/ekreacje-assets/Ona_i_On_w_s%C5%82owach_mockup4.jpg",
         "https://storage.googleapis.com/ekreacje-assets/Ona_i_On_w_s%C5%82owach_mockup_ePUB.jpg"
       ]
     },
@@ -418,10 +418,10 @@ export const getAllProjectsData = (lang: 'pl' | 'en'): AllProjectItem[] => {
       images: [
         "https://storage.googleapis.com/ekreacje-assets/mockup_basnie_1.png",
         "https://storage.googleapis.com/ekreacje-assets/mockup_basnie_2.jpg",
-        "https://storage.googleapis.com/ekreacje-assets/mockup_basnie_3.png",
+        // "https://storage.googleapis.com/ekreacje-assets/mockup_basnie_3.png",
         "https://storage.googleapis.com/ekreacje-assets/mockup_basnie_4.jpg",
-        "https://storage.googleapis.com/ekreacje-assets/mockup_basnie_5.1.jpg",
-        "https://storage.googleapis.com/ekreacje-assets/mockup_basnie_6.png",
+        // "https://storage.googleapis.com/ekreacje-assets/mockup_basnie_5.1.jpg",
+        // "https://storage.googleapis.com/ekreacje-assets/mockup_basnie_6.png",
         "https://storage.googleapis.com/ekreacje-assets/mockup_basnie_7.png",
         "https://storage.googleapis.com/ekreacje-assets/Kr%C3%B3lowa_%C5%9Aniegu_mockup_ePUB1.jpg"
       ]
@@ -435,7 +435,7 @@ export const getAllProjectsData = (lang: 'pl' | 'en'): AllProjectItem[] => {
         "https://storage.googleapis.com/ekreacje-assets/mockup_dolittle_2.jpg",
         "https://storage.googleapis.com/ekreacje-assets/mockup_dolittle_1.jpg",
         "https://storage.googleapis.com/ekreacje-assets/mockup_dolittle_3.jpg",
-        "https://storage.googleapis.com/ekreacje-assets/mockup_dolittle_4.1.jpg"
+        // "https://storage.googleapis.com/ekreacje-assets/mockup_dolittle_4.1.jpg"
       ]
     },
     {
@@ -472,9 +472,9 @@ export const getAllProjectsData = (lang: 'pl' | 'en'): AllProjectItem[] => {
       portfolioId: "01",
       images: [
         "https://storage.googleapis.com/ekreacje-assets/mockup_gruba_1.jpg",
-        "https://storage.googleapis.com/ekreacje-assets/mockup_gruba_2.jpg",
+        // "https://storage.googleapis.com/ekreacje-assets/mockup_gruba_2.jpg",
         "https://storage.googleapis.com/ekreacje-assets/mockup_gruba_3.jpg",
-        "https://storage.googleapis.com/ekreacje-assets/mockup_gruba_4.jpg",
+        // "https://storage.googleapis.com/ekreacje-assets/mockup_gruba_4.jpg",
         "https://storage.googleapis.com/ekreacje-assets/mockup_gruba_5.1.jpg",
         "https://storage.googleapis.com/ekreacje-assets/mockup_gruba_6.1.jpg"
       ]
