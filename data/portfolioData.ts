@@ -409,7 +409,7 @@ export const getAllProjectsData = (lang: 'pl' | 'en'): AllProjectItem[] => {
         "https://storage.googleapis.com/ekreacje-assets/Ona_i_On_w_s%C5%82owach_mockup_ePUB.jpg",
         "https://storage.googleapis.com/ekreacje-assets/ona_i_on_1.1.jpg",
         "https://storage.googleapis.com/ekreacje-assets/ona_i_on_1.2.jpg",
-        "https://storage.googleapis.com/ekreacje-assets/ona_i_on_1.3.jpg",
+        "https://storage.googleapis.com/ekreacje-assets/ona_i_on_1.3.png",
         "https://storage.googleapis.com/ekreacje-assets/ona_i_on_1.4.jpg"
       ]
     },
