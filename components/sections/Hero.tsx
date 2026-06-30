@@ -43,7 +43,7 @@ const Hero = () => {
             {/* Foreground Container - White Frame with Padding */}
             <div className="relative bg-white p-4 md:p-6 shadow-xl z-10">
               <img
-                src="https://storage.googleapis.com/ekreacje-assets/mockup_basnie_0.jpg"
+                src="https://storage.googleapis.com/ekreacje-assets/portrait_2.png"
                 alt="Opened book showing professional typography"
                 className="w-full h-auto block max-w-full"
               />
