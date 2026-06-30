@@ -90,7 +90,7 @@ Ultimately, I developed two cover concepts:
           },
           {
             leftSrc: "https://storage.googleapis.com/ekreacje-assets/3.4_page.png",
-            rightSrc: "https://storage.googleapis.com/ekreacje-assets/3.5_page.png",
+            rightSrc: "https://storage.googleapis.com/ekreacje-assets/Dr.Dolittle_str28-292.png",
           }
         ],
         designNotes: `Dr. Dolittle and His Animals - Hugh Lofting
@@ -257,7 +257,7 @@ Ostatecznie opracowałam dwie koncepcje okładki:
       spreads: [
         {
           leftSrc: "https://storage.googleapis.com/ekreacje-assets/3.6_page.png",
-          rightSrc: "https://storage.googleapis.com/ekreacje-assets/3.7_page.png",
+          rightSrc: "https://storage.googleapis.com/ekreacje-assets/Dr.Dolittle_60-612.png",
         },
         {
           leftSrc: "https://storage.googleapis.com/ekreacje-assets/3.2_page.png",
@@ -265,7 +265,7 @@ Ostatecznie opracowałam dwie koncepcje okładki:
         },
         {
           leftSrc: "https://storage.googleapis.com/ekreacje-assets/3.4_page.png",
-          rightSrc: "https://storage.googleapis.com/ekreacje-assets/3.5_page.png",
+          rightSrc: "https://storage.googleapis.com/ekreacje-assets/Dr.Dolittle_str28-292.png",
         }
       ],
       designNotes: `Zależało mi, aby stworzyć edycję „Doktora Dolittle”, która łączyłaby klasyczną elegancję z potrzebami młodszego czytelnika - czyli projekcie czystym, przejrzystym i na tyle lekkim w odbiorze, by sama typografia zachęcała do śledzenia przygód bohaterów. Postawiłam na minimalizm, w którym to układ tekstu i starannie dobrane kroje pisma budują przedstawiony w książce świat.
@@ -405,9 +405,12 @@ export const getAllProjectsData = (lang: 'pl' | 'en'): AllProjectItem[] => {
       portfolioId: "04",
       images: [
         "https://storage.googleapis.com/ekreacje-assets/Ona_i_On_w_s%C5%82owach_mockup2.jpg",
-        "https://storage.googleapis.com/ekreacje-assets/Ona_i_On_w_s%C5%82owach_mockup3.jpg",
         // "https://storage.googleapis.com/ekreacje-assets/Ona_i_On_w_s%C5%82owach_mockup4.jpg",
-        "https://storage.googleapis.com/ekreacje-assets/Ona_i_On_w_s%C5%82owach_mockup_ePUB.jpg"
+        "https://storage.googleapis.com/ekreacje-assets/Ona_i_On_w_s%C5%82owach_mockup_ePUB.jpg",
+        "https://storage.googleapis.com/ekreacje-assets/ona_i_on_1.1.jpg",
+        "https://storage.googleapis.com/ekreacje-assets/ona_i_on_1.2.jpg",
+        "https://storage.googleapis.com/ekreacje-assets/ona_i_on_1.3.jpg",
+        "https://storage.googleapis.com/ekreacje-assets/ona_i_on_1.4.jpg"
       ]
     },
     {
@@ -417,13 +420,15 @@ export const getAllProjectsData = (lang: 'pl' | 'en'): AllProjectItem[] => {
       portfolioId: "02",
       images: [
         "https://storage.googleapis.com/ekreacje-assets/mockup_basnie_1.png",
-        "https://storage.googleapis.com/ekreacje-assets/mockup_basnie_2.jpg",
         // "https://storage.googleapis.com/ekreacje-assets/mockup_basnie_3.png",
-        "https://storage.googleapis.com/ekreacje-assets/mockup_basnie_4.jpg",
         // "https://storage.googleapis.com/ekreacje-assets/mockup_basnie_5.1.jpg",
         // "https://storage.googleapis.com/ekreacje-assets/mockup_basnie_6.png",
         "https://storage.googleapis.com/ekreacje-assets/mockup_basnie_7.png",
-        "https://storage.googleapis.com/ekreacje-assets/Kr%C3%B3lowa_%C5%9Aniegu_mockup_ePUB1.jpg"
+        "https://storage.googleapis.com/ekreacje-assets/Kr%C3%B3lowa_%C5%9Aniegu_mockup_ePUB1.jpg",
+        "https://storage.googleapis.com/ekreacje-assets/basnie_Wn%C4%99trze1.jpg",
+        "https://storage.googleapis.com/ekreacje-assets/basnie_Wn%C4%99trze2.jpg",
+        "https://storage.googleapis.com/ekreacje-assets/basnie_Wn%C4%99trze3.jpg",
+        "https://storage.googleapis.com/ekreacje-assets/basnie_Wn%C4%99trze4.jpg"
       ]
     },
     {
@@ -433,8 +438,10 @@ export const getAllProjectsData = (lang: 'pl' | 'en'): AllProjectItem[] => {
       portfolioId: "03",
       images: [
         "https://storage.googleapis.com/ekreacje-assets/mockup_dolittle_2.jpg",
-        "https://storage.googleapis.com/ekreacje-assets/mockup_dolittle_1.jpg",
-        "https://storage.googleapis.com/ekreacje-assets/mockup_dolittle_3.jpg",
+        "https://storage.googleapis.com/ekreacje-assets/dr_dolittle_Wn%C4%99trze1.jpg",
+        "https://storage.googleapis.com/ekreacje-assets/dr_dolittle_Wn%C4%99trze2.jpg",
+        "https://storage.googleapis.com/ekreacje-assets/dr_dolittle_Wn%C4%99trze3.jpg",
+        "https://storage.googleapis.com/ekreacje-assets/dr_dolittle_Wn%C4%99trze4.jpg"
         // "https://storage.googleapis.com/ekreacje-assets/mockup_dolittle_4.1.jpg"
       ]
     },
